@@ -14,6 +14,29 @@ const DevOpsSetup = () => {
         description="Configure Claude for infrastructure and operations"
       />
 
+      {/* Context: Where this fits in the agentic flow */}
+      <Card>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '15px',
+          padding: '15px',
+          background: 'linear-gradient(135deg, var(--accent-purple)15, var(--accent-purple)10)',
+          borderRadius: '10px',
+          border: '1px solid var(--accent-purple)33'
+        }}>
+          <span style={{ fontSize: '2rem' }}>🚀</span>
+          <div>
+            <div style={{ fontWeight: '600', marginBottom: '5px' }}>Your Role: Platform Strategist</div>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, DevOps Agent handles deployment (<strong>Step 9</strong>) and Monitoring Agent tracks health (<strong>Step 10</strong>).
+              You approve production releases at <strong>Gate 3</strong> and design the platform architecture.
+              See <a href="/roles/devops" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>DevOps Role</a> for the full picture.
+            </p>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <CardTitle icon="📄">Step 1: Create DevOps CLAUDE.md</CardTitle>
 

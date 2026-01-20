@@ -14,6 +14,29 @@ const QEEngineerSetup = () => {
         description="Configure Claude for quality engineering and test automation"
       />
 
+      {/* Context: Where this fits in the agentic flow */}
+      <Card>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '15px',
+          padding: '15px',
+          background: 'linear-gradient(135deg, var(--accent-green)15, var(--accent-green)10)',
+          borderRadius: '10px',
+          border: '1px solid var(--accent-green)33'
+        }}>
+          <span style={{ fontSize: '2rem' }}>🧪</span>
+          <div>
+            <div style={{ fontWeight: '600', marginBottom: '5px' }}>Your Role: Quality Strategist</div>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, QE Agent generates tests in <strong>Step 7</strong> while Security Agent runs SAST/DAST.
+              You review test coverage and security results at <strong>Gate 3</strong>, focusing on strategy and edge cases AI might miss.
+              See <a href="/roles/qe-engineer" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>QE Engineer Role</a> for the full picture.
+            </p>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <CardTitle icon="📄">Step 1: Create QE CLAUDE.md</CardTitle>
 

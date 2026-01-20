@@ -32,6 +32,28 @@ const MCPIntegrations = () => {
         description="Connect Claude to your tools via Model Context Protocol"
       />
 
+      {/* Context: Where this fits in the agentic flow */}
+      <Card>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '15px',
+          padding: '15px',
+          background: 'linear-gradient(135deg, var(--accent-purple)15, var(--accent-blue)10)',
+          borderRadius: '10px',
+          border: '1px solid var(--accent-purple)33'
+        }}>
+          <span style={{ fontSize: '2rem' }}>🎯</span>
+          <div>
+            <div style={{ fontWeight: '600', marginBottom: '5px' }}>MCP Powers the Orchestrator Agent</div>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, MCP connects the Orchestrator Agent to your tools.
+              This enables AI agents to read from Jira, manage GitHub PRs, update Slack, and access databases - automating the flow between <strong>human gates</strong>.
+            </p>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <CardTitle icon="📋">What is MCP?</CardTitle>
         <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7 }}>

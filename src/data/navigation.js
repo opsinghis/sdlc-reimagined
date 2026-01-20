@@ -11,10 +11,6 @@ import {
   Settings,
   Building,
   Target,
-  Palette,
-  Server,
-  ShoppingCart,
-  BarChart3,
   Rocket,
   Terminal,
   Plug,
@@ -53,12 +49,6 @@ export const navigation = [
   { id: 'role-devops', icon: Settings, label: 'DevOps / Platform', section: 'Roles & Claude', path: '/roles/devops' },
   { id: 'role-architect', icon: Building, label: 'Architect', section: 'Roles & Claude', path: '/roles/architect' },
   { id: 'role-scrum', icon: Target, label: 'Scrum Master / Coach', section: 'Roles & Claude', path: '/roles/scrum-master' },
-
-  // Team Playbooks
-  { id: 'team-frontend', icon: Palette, label: 'Frontend Team', section: 'Team Playbooks', path: '/playbooks/frontend' },
-  { id: 'team-backend', icon: Server, label: 'Microservices Team', section: 'Team Playbooks', path: '/playbooks/backend' },
-  { id: 'team-commerce', icon: ShoppingCart, label: 'Commerce Platform', section: 'Team Playbooks', path: '/playbooks/commerce' },
-  { id: 'team-data', icon: BarChart3, label: 'CDP / Data Team', section: 'Team Playbooks', path: '/playbooks/data' },
 
   // Setup & Execute
   { id: 'setup-quick', icon: Zap, label: 'Quick Start (5 min)', section: 'Setup & Execute', path: '/setup/quick-start' },

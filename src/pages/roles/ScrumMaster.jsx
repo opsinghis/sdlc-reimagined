@@ -93,6 +93,57 @@ const ScrumMaster = () => {
         description="From ceremony facilitator to transformation coach"
       />
 
+      {/* Your Role in the Agentic Flow */}
+      <Card>
+        <div style={{
+          background: 'linear-gradient(135deg, var(--accent-green)20, var(--accent-green)10)',
+          border: '2px solid var(--accent-green)',
+          borderRadius: '12px',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
+            <div style={{
+              width: '50px',
+              height: '50px',
+              borderRadius: '8px',
+              background: 'var(--accent-green)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '1.5rem'
+            }}>🎯</div>
+            <div>
+              <div style={{ fontWeight: '700', fontSize: '1.1rem', color: 'var(--accent-green)' }}>Flow Manager</div>
+              <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Orchestrator Agent manages flow - you optimize the system and coach humans</div>
+            </div>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px' }}>
+            <div style={{ background: 'var(--bg-card)', padding: '15px', borderRadius: '8px' }}>
+              <div style={{ fontWeight: '600', color: 'var(--accent-blue)', marginBottom: '5px' }}>Step 2: Orchestration</div>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                Orchestrator Agent decomposes work, manages WIP limits, tracks flow. Replaces sprint ceremonies.
+              </p>
+            </div>
+            <div style={{ background: 'var(--bg-card)', padding: '15px', borderRadius: '8px', border: '2px dashed var(--accent-orange)' }}>
+              <div style={{ fontWeight: '600', color: 'var(--accent-orange)', marginBottom: '5px' }}>🎯 All 3 Gates: Facilitation</div>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                You facilitate human reviews at gates, ensure smooth handoffs, remove organizational blockers.
+              </p>
+            </div>
+            <div style={{ background: 'var(--bg-card)', padding: '15px', borderRadius: '8px' }}>
+              <div style={{ fontWeight: '600', color: 'var(--accent-green)', marginBottom: '5px' }}>Your Focus</div>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                Team coaching, flow optimization, continuous improvement, transformation leadership.
+              </p>
+            </div>
+          </div>
+          <div style={{ marginTop: '15px', textAlign: 'center' }}>
+            <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</a>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <CardTitle icon="🔄">Role Transformation</CardTitle>
         <ComparisonGrid>

@@ -62,6 +62,29 @@ const TeamRollout = () => {
         description="Step-by-step guide to roll out Claude across your entire team"
       />
 
+      {/* Context: Where this fits in the agentic flow */}
+      <Card>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '15px',
+          padding: '15px',
+          background: 'linear-gradient(135deg, var(--accent-purple)15, var(--accent-blue)10)',
+          borderRadius: '10px',
+          border: '1px solid var(--accent-purple)33'
+        }}>
+          <span style={{ fontSize: '2rem' }}>🎯</span>
+          <div>
+            <div style={{ fontWeight: '600', marginBottom: '5px' }}>Rolling Out the Agentic SDLC</div>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              This rollout plan transitions your team to the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>.
+              Each role learns to work with AI agents: POs at <strong>Gate 1</strong>, Architects at <strong>Gate 2</strong>, and Developers/QE/DevOps at <strong>Gate 3</strong>.
+              See the <a href="/ai-native/transition-roadmap" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>Transition Roadmap</a> for the full 4-wave adoption plan.
+            </p>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <CardTitle icon="📋">Pre-Rollout Checklist</CardTitle>
 

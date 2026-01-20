@@ -74,6 +74,29 @@ const WorkManagement = () => {
         description="Do we still need tickets? What does AI-native work management look like?"
       />
 
+      {/* Context: Where this fits in the agentic flow */}
+      <Card>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '15px',
+          padding: '15px',
+          background: 'linear-gradient(135deg, var(--accent-purple)15, var(--accent-blue)10)',
+          borderRadius: '10px',
+          border: '1px solid var(--accent-purple)33'
+        }}>
+          <span style={{ fontSize: '2rem' }}>🎯</span>
+          <div>
+            <div style={{ fontWeight: '600', marginBottom: '5px' }}>In the Agentic SDLC Model</div>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, the Orchestrator Agent becomes the work management system.
+              It receives human intent at <strong>Gate 1</strong>, decomposes into tasks, assigns to specialist agents, tracks progress, and surfaces items for human review at <strong>Gate 2</strong> and <strong>Gate 3</strong>.
+              Traditional ticket management is replaced by intent-based orchestration.
+            </p>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <div className="decision-box">
           <h3 style={{ marginBottom: '15px' }}>🤔 The Big Question: Do We Still Need Jira?</h3>

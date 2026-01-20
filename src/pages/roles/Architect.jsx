@@ -93,6 +93,57 @@ const Architect = () => {
         description="From diagram drafter to architectural director"
       />
 
+      {/* Your Role in the Agentic Flow */}
+      <Card>
+        <div style={{
+          background: 'linear-gradient(135deg, var(--accent-blue)20, var(--accent-blue)10)',
+          border: '2px solid var(--accent-blue)',
+          borderRadius: '12px',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
+            <div style={{
+              width: '50px',
+              height: '50px',
+              borderRadius: '8px',
+              background: 'var(--accent-blue)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '1.5rem'
+            }}>🏗️</div>
+            <div>
+              <div style={{ fontWeight: '700', fontSize: '1.1rem', color: 'var(--accent-blue)' }}>Architecture Director</div>
+              <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Architect Agent generates designs - you approve at Gate 2 and guide strategy</div>
+            </div>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px' }}>
+            <div style={{ background: 'var(--bg-card)', padding: '15px', borderRadius: '8px' }}>
+              <div style={{ fontWeight: '600', color: 'var(--accent-blue)', marginBottom: '5px' }}>Step 4: Architecture Design</div>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                Architect Agent generates system designs, ADRs, API specs. Identifies risks and dependencies.
+              </p>
+            </div>
+            <div style={{ background: 'var(--bg-card)', padding: '15px', borderRadius: '8px', border: '2px dashed var(--accent-orange)' }}>
+              <div style={{ fontWeight: '600', color: 'var(--accent-orange)', marginBottom: '5px' }}>🎯 Gate 2: Design Review</div>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                You review AI-generated architecture. Validate technical approach. Approve before build begins.
+              </p>
+            </div>
+            <div style={{ background: 'var(--bg-card)', padding: '15px', borderRadius: '8px' }}>
+              <div style={{ fontWeight: '600', color: 'var(--accent-green)', marginBottom: '5px' }}>Your Focus</div>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                Strategic decisions, system-wide thinking, governance, enabling teams.
+              </p>
+            </div>
+          </div>
+          <div style={{ marginTop: '15px', textAlign: 'center' }}>
+            <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</a>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <CardTitle icon="🔄">Role Transformation</CardTitle>
         <ComparisonGrid>

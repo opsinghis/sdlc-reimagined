@@ -14,6 +14,29 @@ const ArchitectSetup = () => {
         description="Configure Claude for architecture and technical leadership"
       />
 
+      {/* Context: Where this fits in the agentic flow */}
+      <Card>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '15px',
+          padding: '15px',
+          background: 'linear-gradient(135deg, var(--accent-blue)15, var(--accent-blue)10)',
+          borderRadius: '10px',
+          border: '1px solid var(--accent-blue)33'
+        }}>
+          <span style={{ fontSize: '2rem' }}>🏗️</span>
+          <div>
+            <div style={{ fontWeight: '600', marginBottom: '5px' }}>Your Role: Architecture Director</div>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, Architect Agent generates system designs and ADRs in <strong>Step 4</strong>.
+              You review and approve architecture at <strong>Gate 2</strong>, guiding strategy and making key technical decisions.
+              See <a href="/roles/architect" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>Architect Role</a> for the full picture.
+            </p>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <CardTitle icon="📄">Step 1: Create Architect CLAUDE.md</CardTitle>
 

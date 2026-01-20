@@ -269,6 +269,29 @@ Flag anything stale >2 days or blocked >1 day"`
         description="Which meetings survive? Which transform? Which disappear?"
       />
 
+      {/* Context: Where this fits in the agentic flow */}
+      <Card>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '15px',
+          padding: '15px',
+          background: 'linear-gradient(135deg, var(--accent-purple)15, var(--accent-blue)10)',
+          borderRadius: '10px',
+          border: '1px solid var(--accent-purple)33'
+        }}>
+          <span style={{ fontSize: '2rem' }}>🎯</span>
+          <div>
+            <div style={{ fontWeight: '600', marginBottom: '5px' }}>In the Agentic SDLC Model</div>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              The <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a> with only <strong>3 human gates</strong> eliminates most synchronous ceremonies.
+              The Orchestrator Agent maintains real-time state, making status meetings obsolete.
+              Humans sync only for strategic decisions at Gate 1 (Intent), Gate 2 (Spec Review), and Gate 3 (Final Approval).
+            </p>
+          </div>
+        </div>
+      </Card>
+
       {ceremonies.map((ceremony, index) => (
         <CeremonyCard key={index} {...ceremony} />
       ))}

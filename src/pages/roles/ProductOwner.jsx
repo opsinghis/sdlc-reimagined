@@ -58,6 +58,51 @@ const ProductOwner = () => {
         description="From ticket writer to strategic product leader"
       />
 
+      {/* Your Role in the Agentic Flow */}
+      <Card>
+        <div style={{
+          background: 'linear-gradient(135deg, var(--accent-orange)20, var(--accent-orange)10)',
+          border: '2px dashed var(--accent-orange)',
+          borderRadius: '12px',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
+            <div style={{
+              width: '50px',
+              height: '50px',
+              borderRadius: '50%',
+              background: 'var(--accent-orange)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '1.5rem'
+            }}>👤</div>
+            <div>
+              <div style={{ fontWeight: '700', fontSize: '1.1rem', color: 'var(--accent-orange)' }}>Gate 1 & 2 Owner: Intent Definer</div>
+              <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>You own the first two human checkpoints in the agentic flow</div>
+            </div>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+            <div style={{ background: 'var(--bg-card)', padding: '15px', borderRadius: '8px' }}>
+              <div style={{ fontWeight: '600', color: 'var(--accent-orange)', marginBottom: '5px' }}>🎯 Gate 1: Define Intent</div>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                You define <strong>what to build</strong> - goals, success criteria, scope boundaries. The Product Agent then generates detailed requirements.
+              </p>
+            </div>
+            <div style={{ background: 'var(--bg-card)', padding: '15px', borderRadius: '8px' }}>
+              <div style={{ fontWeight: '600', color: 'var(--accent-orange)', marginBottom: '5px' }}>📋 Gate 2: Review Specs</div>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                You validate AI-generated requirements before design begins. Are these specs correct? Does this capture the intent?
+              </p>
+            </div>
+          </div>
+          <div style={{ marginTop: '15px', textAlign: 'center' }}>
+            <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</a>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <CardTitle icon="🔄">Role Transformation</CardTitle>
         <ComparisonGrid>

@@ -63,6 +63,29 @@ const DeveloperSetup = () => {
         description="Complete Claude configuration for developers"
       />
 
+      {/* Context: Where this fits in the agentic flow */}
+      <Card>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '15px',
+          padding: '15px',
+          background: 'linear-gradient(135deg, var(--accent-blue)15, var(--accent-blue)10)',
+          borderRadius: '10px',
+          border: '1px solid var(--accent-blue)33'
+        }}>
+          <span style={{ fontSize: '2rem' }}>💻</span>
+          <div>
+            <div style={{ fontWeight: '600', marginBottom: '5px' }}>Your Role: AI-Augmented Developer</div>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, Dev Agents (Frontend, Backend, Database) handle code generation in <strong>Steps 5-6</strong>.
+              You review AI-generated code at <strong>Gate 3</strong>, make architectural decisions, and focus on complex problems.
+              See <a href="/roles/developer" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>Developer Role</a> for the full picture.
+            </p>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <CardTitle icon="📄">Step 1: Create Developer CLAUDE.md</CardTitle>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>Place this file in your project root:</p>

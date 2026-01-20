@@ -93,6 +93,57 @@ const DevOps = () => {
         description="From script runner to platform architect"
       />
 
+      {/* Your Role in the Agentic Flow */}
+      <Card>
+        <div style={{
+          background: 'linear-gradient(135deg, var(--accent-purple)20, var(--accent-purple)10)',
+          border: '2px solid var(--accent-purple)',
+          borderRadius: '12px',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
+            <div style={{
+              width: '50px',
+              height: '50px',
+              borderRadius: '8px',
+              background: 'var(--accent-purple)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '1.5rem'
+            }}>🚀</div>
+            <div>
+              <div style={{ fontWeight: '700', fontSize: '1.1rem', color: 'var(--accent-purple)' }}>Platform Strategist</div>
+              <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>DevOps Agent handles deployment - you design platforms and approve at Gate 3</div>
+            </div>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px' }}>
+            <div style={{ background: 'var(--bg-card)', padding: '15px', borderRadius: '8px' }}>
+              <div style={{ fontWeight: '600', color: 'var(--accent-blue)', marginBottom: '5px' }}>Steps 9-10: AI Deploys & Monitors</div>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                DevOps Agent executes deployment. Monitoring Agent tracks health. Auto-rollback on issues.
+              </p>
+            </div>
+            <div style={{ background: 'var(--bg-card)', padding: '15px', borderRadius: '8px', border: '2px dashed var(--accent-orange)' }}>
+              <div style={{ fontWeight: '600', color: 'var(--accent-orange)', marginBottom: '5px' }}>🎯 Gate 3: Deploy Approval</div>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                You approve production releases. Validate infrastructure changes. Review security posture.
+              </p>
+            </div>
+            <div style={{ background: 'var(--bg-card)', padding: '15px', borderRadius: '8px' }}>
+              <div style={{ fontWeight: '600', color: 'var(--accent-green)', marginBottom: '5px' }}>Your Focus</div>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                Platform architecture, reliability engineering, cost optimization, security strategy.
+              </p>
+            </div>
+          </div>
+          <div style={{ marginTop: '15px', textAlign: 'center' }}>
+            <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</a>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <CardTitle icon="🔄">Role Transformation</CardTitle>
         <ComparisonGrid>

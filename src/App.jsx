@@ -11,7 +11,6 @@ import {
 } from './pages/ai-native';
 import { Ceremonies, ContinuousFlow, WorkManagement } from './pages/process';
 import { ProductOwner, Developer, QEEngineer, DevOps, Architect, ScrumMaster } from './pages/roles';
-import { Frontend, Backend, Commerce, Data } from './pages/playbooks';
 import {
   QuickStart,
   DeveloperSetup,
@@ -56,12 +55,6 @@ function App() {
           <Route path="roles/devops" element={<DevOps />} />
           <Route path="roles/architect" element={<Architect />} />
           <Route path="roles/scrum-master" element={<ScrumMaster />} />
-
-          {/* Team Playbooks */}
-          <Route path="playbooks/frontend" element={<Frontend />} />
-          <Route path="playbooks/backend" element={<Backend />} />
-          <Route path="playbooks/commerce" element={<Commerce />} />
-          <Route path="playbooks/data" element={<Data />} />
 
           {/* Setup */}
           <Route path="setup/quick-start" element={<QuickStart />} />

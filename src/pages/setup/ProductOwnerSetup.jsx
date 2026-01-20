@@ -54,6 +54,29 @@ const ProductOwnerSetup = () => {
         description="Configure Claude for product management workflows"
       />
 
+      {/* Context: Where this fits in the agentic flow */}
+      <Card>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '15px',
+          padding: '15px',
+          background: 'linear-gradient(135deg, var(--accent-orange)15, var(--accent-orange)10)',
+          borderRadius: '10px',
+          border: '1px solid var(--accent-orange)33'
+        }}>
+          <span style={{ fontSize: '2rem' }}>👤</span>
+          <div>
+            <div style={{ fontWeight: '600', marginBottom: '5px' }}>Your Role: Intent Definer (Gate 1 & 2 Owner)</div>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, you define intent at <strong>Gate 1</strong> (Step 1) and review AI-generated specs at <strong>Gate 2</strong> (Step 3).
+              The Product Agent then translates your intent into detailed requirements.
+              See <a href="/roles/product-owner" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>Product Owner Role</a> for the full picture.
+            </p>
+          </div>
+        </div>
+      </Card>
+
       <Card>
         <CardTitle icon="📄">Step 1: Create PO CLAUDE.md</CardTitle>
 
