@@ -12,24 +12,24 @@ const PlaceholderPage = ({ title, description }) => {
       '/ceremonies': { title: '📅 Ceremonies Reimagined', desc: 'Which meetings survive? Which transform? Which disappear?' },
       '/continuous-flow': { title: '🌊 From Sprints to Continuous Flow', desc: 'Why time-boxing made sense before AI, and what replaces it' },
       '/work-management': { title: '📋 Beyond Jira & Kanban', desc: 'Do we still need tickets? What does AI-native work management look like?' },
-      '/roles/product-owner': { title: '👤 Product Owner with Claude', desc: 'From ticket writer to strategic product leader' },
-      '/roles/developer': { title: '👨‍💻 Developer with Claude', desc: 'From coder to AI orchestrator' },
-      '/roles/qe-engineer': { title: '🧪 QE Engineer with Claude', desc: 'From test writer to quality strategist' },
-      '/roles/devops': { title: '⚙️ DevOps with Claude', desc: 'From script runner to platform architect' },
-      '/roles/architect': { title: '🏗️ Architect with Claude', desc: 'From diagram drafter to architectural director' },
-      '/roles/scrum-master': { title: '🎯 Scrum Master with Claude', desc: 'From ceremony facilitator to transformation coach' },
+      '/roles/product-owner': { title: '👤 Product Owner with AI', desc: 'From ticket writer to strategic product leader' },
+      '/roles/developer': { title: '👨‍💻 Developer with AI', desc: 'From coder to AI orchestrator' },
+      '/roles/qe-engineer': { title: '🧪 QE Engineer with AI', desc: 'From test writer to quality strategist' },
+      '/roles/devops': { title: '⚙️ DevOps with AI', desc: 'From script runner to platform architect' },
+      '/roles/architect': { title: '🏗️ Architect with AI', desc: 'From diagram drafter to architectural director' },
+      '/roles/scrum-master': { title: '🎯 Scrum Master with AI', desc: 'From ceremony facilitator to transformation coach' },
       '/playbooks/frontend': { title: '🎨 Frontend Team Playbook', desc: 'AI-native workflows for frontend development' },
       '/playbooks/backend': { title: '🔧 Microservices Team Playbook', desc: 'AI-native workflows for backend development' },
       '/playbooks/commerce': { title: '🛒 Commerce Platform Playbook', desc: 'AI-native workflows for e-commerce teams' },
       '/playbooks/data': { title: '📊 CDP / Data Team Playbook', desc: 'AI-native workflows for data engineering' },
-      '/setup/quick-start': { title: '⚡ Quick Start Setup', desc: 'Get Claude Code running in 5 minutes' },
-      '/setup/developer': { title: '👨‍💻 Developer Setup', desc: 'Complete Claude configuration for developers' },
-      '/setup/product-owner': { title: '👤 Product Owner Setup', desc: 'Configure Claude for product management workflows' },
-      '/setup/qe-engineer': { title: '🧪 QE Engineer Setup', desc: 'Configure Claude for quality engineering' },
-      '/setup/devops': { title: '⚙️ DevOps Setup', desc: 'Configure Claude for platform engineering' },
-      '/setup/architect': { title: '🏗️ Architect Setup', desc: 'Configure Claude for architecture work' },
-      '/setup/mcp': { title: '🔌 MCP Integrations', desc: 'Connect Claude to your tools via Model Context Protocol' },
-      '/setup/team-rollout': { title: '👥 Full Team Rollout', desc: 'Step-by-step guide to roll out Claude across your team' },
+      '/setup/quick-start': { title: '⚡ Quick Start Setup', desc: 'Get AI Coding Assistant running in 5 minutes' },
+      '/setup/developer': { title: '👨‍💻 Developer Setup', desc: 'Complete AI configuration for developers' },
+      '/setup/product-owner': { title: '👤 Product Owner Setup', desc: 'Configure AI for product management workflows' },
+      '/setup/qe-engineer': { title: '🧪 QE Engineer Setup', desc: 'Configure AI for quality engineering' },
+      '/setup/devops': { title: '⚙️ DevOps Setup', desc: 'Configure AI for platform engineering' },
+      '/setup/architect': { title: '🏗️ Architect Setup', desc: 'Configure AI for architecture work' },
+      '/setup/mcp': { title: '🔌 MCP Integrations', desc: 'Connect AI to your tools via Model Context Protocol' },
+      '/setup/team-rollout': { title: '👥 Full Team Rollout', desc: 'Step-by-step guide to roll out AI tools across your team' },
       '/implementation': { title: '🚀 Implementation Roadmap', desc: 'Phased approach to AI-native transformation' }
     };
 
@@ -66,7 +66,7 @@ const PlaceholderPage = ({ title, description }) => {
             ✓ Copy-paste ready configurations
           </li>
           <li style={{ padding: '10px 0', borderBottom: '1px solid var(--border)', color: 'var(--text-secondary)' }}>
-            ✓ Claude prompts and workflows
+            ✓ AI prompts and workflows
           </li>
           <li style={{ padding: '10px 0', color: 'var(--text-secondary)' }}>
             ✓ Implementation checklists

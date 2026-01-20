@@ -93,8 +93,8 @@ const Frontend = () => {
 
       <Card>
         <CardTitle icon="⚙️">Tech Stack Context</CardTitle>
-        <CodeBlock language="markdown" filename="CLAUDE-frontend.md">
-{`# Frontend Team CLAUDE.md
+        <CodeBlock language="markdown" filename="AI-CONFIG-frontend.md">
+{`# Frontend Team AI-CONFIG.md
 
 ## Tech Stack
 - React 18 with TypeScript
@@ -137,7 +137,7 @@ src/
               <span style={{ fontSize: '1.5rem' }}>{workflow.icon}</span>
               <h4 style={{ margin: 0 }}>{workflow.title}</h4>
             </div>
-            <PromptBox label="Claude Prompt">
+            <PromptBox label="AI Prompt">
               {workflow.prompt}
             </PromptBox>
           </div>
@@ -148,28 +148,28 @@ src/
         <CardTitle icon="📋">Quick Commands</CardTitle>
         <CodeBlock language="bash" filename="frontend-aliases.sh">
 {`# Component scaffolding
-alias cnew='claude "Create a new React component with TypeScript, tests, and Storybook story:"'
+alias cnew='ai "Create a new React component with TypeScript, tests, and Storybook story:"'
 
 # Design to code
-alias cdesign='claude "Convert this Figma design to React component:"'
+alias cdesign='ai "Convert this Figma design to React component:"'
 
 # Fix styling
-alias cstyle='claude "Fix the styling issues in this component to match the design:"'
+alias cstyle='ai "Fix the styling issues in this component to match the design:"'
 
 # Accessibility fix
-alias ca11y='claude "Fix accessibility issues in this component:"'
+alias ca11y='ai "Fix accessibility issues in this component:"'
 
 # Performance
-alias cperf='claude "Optimize performance of this component:"'
+alias cperf='ai "Optimize performance of this component:"'
 
 # Test generation
-alias cftest='claude "Generate React Testing Library tests for this component:"'
+alias cftest='ai "Generate React Testing Library tests for this component:"'
 
 # E2E test
-alias ce2e='claude "Generate Playwright E2E test for this user flow:"'
+alias ce2e='ai "Generate Playwright E2E test for this user flow:"'
 
 # State refactor
-alias cstate='claude "Refactor state management in this component:"'`}
+alias cstate='ai "Refactor state management in this component:"'`}
         </CodeBlock>
       </Card>
 

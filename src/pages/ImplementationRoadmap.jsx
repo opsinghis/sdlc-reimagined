@@ -66,8 +66,8 @@ const ImplementationRoadmap = () => {
       color: 'var(--accent-green)',
       icon: '📋',
       tasks: [
-        { week: 1, task: 'Create CLAUDE.md template', critical: false },
-        { week: 2, task: 'Role-specific CLAUDE.md files', critical: false },
+        { week: 1, task: 'Create AI-CONFIG.md template', critical: false },
+        { week: 2, task: 'Role-specific AI-CONFIG.md files', critical: false },
         { week: 3, task: 'Capture baseline metrics', critical: true },
         { week: 4, task: 'Phase 1 retrospective', critical: true },
         { week: 7, task: 'Code review checklist for AI', critical: true },
@@ -85,7 +85,7 @@ const ImplementationRoadmap = () => {
       color: 'var(--accent-orange)',
       icon: '🚀',
       tasks: [
-        { week: 2, task: 'Install Claude Code', critical: true },
+        { week: 2, task: 'Install AI Coding Assistant', critical: true },
         { week: 2, task: 'Identify AI champions', critical: true },
         { week: 4, task: 'First feature through Gate 1', critical: true },
         { week: 4, task: 'Review AI requirements', critical: true },
@@ -152,9 +152,9 @@ const ImplementationRoadmap = () => {
       highLevel: {
         goal: 'Every pilot team member uses AI daily for core tasks',
         kpis: [
-          { metric: '80% pilot team active Claude usage', target: '80%' },
+          { metric: '80% pilot team active AI usage', target: '80%' },
           { metric: 'Baseline metrics captured', target: '100%' },
-          { metric: 'CLAUDE.md configured per role', target: '100%' }
+          { metric: 'AI-CONFIG.md configured per role', target: '100%' }
         ],
         risks: [
           { risk: 'Resistance to change', mitigation: 'Identify champions, demonstrate quick wins' },
@@ -169,8 +169,8 @@ const ImplementationRoadmap = () => {
             tasks: [
               { task: 'Deploy Orchestrator Agent infrastructure', owner: 'Platform Team', critical: true, criteria: 'Agent responds to API calls, logs visible' },
               { task: 'Configure MCP integrations (Jira, GitHub)', owner: 'Platform Team', critical: true, criteria: 'Bidirectional sync working' },
-              { task: 'Set up Claude Code licenses for pilot team', owner: 'IT/Procurement', critical: true, criteria: 'All pilot members have access' },
-              { task: 'Create base CLAUDE.md template', owner: 'Tech Lead', critical: false, criteria: 'Template reviewed and approved' },
+              { task: 'Set up AI Coding Assistant licenses for pilot team', owner: 'IT/Procurement', critical: true, criteria: 'All pilot members have access' },
+              { task: 'Create base AI-CONFIG.md template', owner: 'Tech Lead', critical: false, criteria: 'Template reviewed and approved' },
               { task: 'Establish secure API key management', owner: 'Security Team', critical: true, criteria: 'Keys rotatable, no hardcoding' }
             ]
           },
@@ -180,8 +180,8 @@ const ImplementationRoadmap = () => {
             tasks: [
               { task: 'Select pilot team (full-stack squad preferred)', owner: 'Engineering Manager', critical: true, criteria: 'Team of 5-8 with mix of roles' },
               { task: 'Conduct AI-native SDLC training session', owner: 'Transformation Lead', critical: true, criteria: 'All pilot members attend' },
-              { task: 'Install Claude Code for all pilot members', owner: 'Developers', critical: true, criteria: '100% installation verified' },
-              { task: 'Create role-specific CLAUDE.md files', owner: 'Tech Lead + Roles', critical: false, criteria: 'PO, Dev, QE configs created' },
+              { task: 'Install AI Coding Assistant for all pilot members', owner: 'Developers', critical: true, criteria: '100% installation verified' },
+              { task: 'Create role-specific AI-CONFIG.md files', owner: 'Tech Lead + Roles', critical: false, criteria: 'PO, Dev, QE configs created' },
               { task: 'Identify 2-3 AI champions in pilot team', owner: 'Engineering Manager', critical: true, criteria: 'Champions named and committed' }
             ]
           },
@@ -203,7 +203,7 @@ const ImplementationRoadmap = () => {
               { task: 'Run first feature through Gate 1', owner: 'Product Owner', critical: true, criteria: 'Intent → Generated requirements' },
               { task: 'Product Agent generates user stories', owner: 'Product Agent', critical: true, criteria: 'Stories have acceptance criteria' },
               { task: 'Pilot team reviews AI-generated requirements', owner: 'Pilot Team', critical: true, criteria: 'Feedback documented' },
-              { task: 'Iterate CLAUDE.md based on learnings', owner: 'Tech Lead', critical: false, criteria: 'At least 3 improvements made' },
+              { task: 'Iterate AI-CONFIG.md based on learnings', owner: 'Tech Lead', critical: false, criteria: 'At least 3 improvements made' },
               { task: 'Phase 1 retrospective and adjustments', owner: 'Transformation Lead', critical: true, criteria: 'Action items for Phase 2' }
             ]
           }
@@ -1110,7 +1110,7 @@ const ImplementationRoadmap = () => {
 
       <InfoBox variant="insight" title="Getting Started">
         <p style={{ margin: 0 }}>
-          Start with the <strong>Quick Start Setup</strong> in the sidebar to install Claude Code, then follow this roadmap phase by phase.
+          Start with the <strong>Quick Start Setup</strong> in the sidebar to install your AI Coding Assistant, then follow this roadmap phase by phase.
           The <a href="/ai-native/transition-roadmap" style={{ color: 'var(--accent-purple)' }}>Transition Roadmap</a> provides the strategic 4-wave view,
           while this page gives you the tactical week-by-week execution plan.
         </p>

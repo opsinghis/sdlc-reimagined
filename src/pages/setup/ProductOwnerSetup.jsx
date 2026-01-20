@@ -13,7 +13,7 @@ const ProductOwnerSetup = () => {
       title: 'Morning: Review & Plan',
       description: (
         <>
-          <code>claude "Summarize overnight customer feedback from Intercom and identify urgent issues"</code><br/>
+          <code>ai "Summarize overnight customer feedback from Intercom and identify urgent issues"</code><br/>
           Review AI-generated daily digest of product metrics
         </>
       )
@@ -51,7 +51,7 @@ const ProductOwnerSetup = () => {
     <div>
       <PageHeader
         title="👤 Product Owner Setup"
-        description="Configure Claude for product management workflows"
+        description="Configure AI for product management workflows"
       />
 
       {/* Context: Where this fits in the agentic flow */}
@@ -78,10 +78,10 @@ const ProductOwnerSetup = () => {
       </Card>
 
       <Card>
-        <CardTitle icon="📄">Step 1: Create PO CLAUDE.md</CardTitle>
+        <CardTitle icon="📄">Step 1: Create PO AI-CONFIG.md</CardTitle>
 
-        <CodeBlock language="markdown" filename="CLAUDE-PO.md">
-{`# CLAUDE.md - Product Owner Configuration
+        <CodeBlock language="markdown" filename="AI-CONFIG-PO.md">
+{`# AI-CONFIG.md - Product Owner Configuration
 
 ## Role
 You are an AI product analyst assistant helping a Product Owner manage the product backlog, write user stories, and make data-driven decisions.
@@ -188,58 +188,58 @@ So that [benefit].
       <Card>
         <CardTitle icon="📚">Step 2: PO Prompt Library</CardTitle>
 
-        <CodeBlock language="bash" filename=".claude-po-aliases.sh">
+        <CodeBlock language="bash" filename=".ai-po-aliases.sh">
 {`# Product Owner Aliases
 
 # ===== USER STORIES =====
 
 # Generate stories from intent
-alias cstory='claude "Generate user stories with full acceptance criteria for:"'
+alias cstory='ai "Generate user stories with full acceptance criteria for:"'
 
 # Expand epic into stories
-alias cepic='claude "Break down this epic into user stories. Each story should be independently deliverable and fit in one sprint:"'
+alias cepic='ai "Break down this epic into user stories. Each story should be independently deliverable and fit in one sprint:"'
 
 # Refine story
-alias crefine='claude "Refine this user story. Add missing acceptance criteria, identify edge cases, and add technical notes:"'
+alias crefine='ai "Refine this user story. Add missing acceptance criteria, identify edge cases, and add technical notes:"'
 
 # ===== PRIORITIZATION =====
 
 # Prioritize backlog
-alias cpriority='claude "Analyze and prioritize these backlog items. Consider: business value, user impact, effort, dependencies. Recommend order with rationale:"'
+alias cpriority='ai "Analyze and prioritize these backlog items. Consider: business value, user impact, effort, dependencies. Recommend order with rationale:"'
 
 # RICE scoring
-alias crice='claude "Score these features using RICE (Reach, Impact, Confidence, Effort). Provide a ranked list:"'
+alias crice='ai "Score these features using RICE (Reach, Impact, Confidence, Effort). Provide a ranked list:"'
 
 # ===== DOCUMENTATION =====
 
 # Generate PRD
-alias cprd='claude "Create a Product Requirements Document for this feature. Include: problem statement, user personas, user stories, success metrics, and rollout plan:"'
+alias cprd='ai "Create a Product Requirements Document for this feature. Include: problem statement, user personas, user stories, success metrics, and rollout plan:"'
 
 # Release notes
-alias crelease='claude "Generate release notes from these completed tickets. Create three versions: 1) Internal/technical, 2) Stakeholder summary, 3) Customer-facing changelog:"'
+alias crelease='ai "Generate release notes from these completed tickets. Create three versions: 1) Internal/technical, 2) Stakeholder summary, 3) Customer-facing changelog:"'
 
 # ===== ANALYSIS =====
 
 # Customer feedback analysis
-alias cfeedback='claude "Analyze this customer feedback. Identify: top themes, sentiment, actionable insights, and recommended backlog items:"'
+alias cfeedback='ai "Analyze this customer feedback. Identify: top themes, sentiment, actionable insights, and recommended backlog items:"'
 
 # Competitive analysis
-alias ccompete='claude "Research and compare how competitors handle this feature. Identify gaps and opportunities:"'
+alias ccompete='ai "Research and compare how competitors handle this feature. Identify gaps and opportunities:"'
 
 # ===== MEETINGS =====
 
 # Sprint planning prep
-alias cplanprep='claude "Prepare for sprint planning. From the backlog, recommend stories for next sprint based on: priority, team capacity of [X] points, and dependencies:"'
+alias cplanprep='ai "Prepare for sprint planning. From the backlog, recommend stories for next sprint based on: priority, team capacity of [X] points, and dependencies:"'
 
 # Stakeholder update
-alias cstakeholder='claude "Generate a stakeholder update summarizing: what shipped last sprint, what is in progress, upcoming priorities, and any risks/blockers:"'
+alias cstakeholder='ai "Generate a stakeholder update summarizing: what shipped last sprint, what is in progress, upcoming priorities, and any risks/blockers:"'
 
 # ===== FUNCTIONS =====
 
 # Full feature workflow
 feature_spec() {
     echo "📋 Generating full spec for: $1"
-    claude "Create a complete feature specification for: $1
+    ai "Create a complete feature specification for: $1
 
     Include:
     1. Problem Statement
@@ -255,7 +255,7 @@ feature_spec() {
 
 # Backlog health check
 backlog_health() {
-    claude "Analyze our backlog health:
+    ai "Analyze our backlog health:
     1. Stories without acceptance criteria
     2. Stories too large (need splitting)
     3. Stale items (no updates in 30+ days)
@@ -349,7 +349,7 @@ So that [measurable benefit they receive].
       </Card>
 
       <Card>
-        <CardTitle icon="📋">Daily PO Workflow with Claude</CardTitle>
+        <CardTitle icon="📋">Daily PO Workflow with AI</CardTitle>
         <Timeline items={dailyWorkflow} />
       </Card>
     </div>

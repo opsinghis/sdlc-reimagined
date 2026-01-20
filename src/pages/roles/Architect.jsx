@@ -89,7 +89,7 @@ const Architect = () => {
   return (
     <div>
       <PageHeader
-        title="🏗️ Architect with Claude"
+        title="🏗️ Architect with AI"
         description="From diagram drafter to architectural director"
       />
 
@@ -169,7 +169,7 @@ const Architect = () => {
       </Card>
 
       <Card>
-        <CardTitle icon="🛠️">Claude-Powered Architecture Workflows</CardTitle>
+        <CardTitle icon="🛠️">AI-Powered Architecture Workflows</CardTitle>
 
         {workflows.map((workflow, index) => (
           <div key={index} style={{
@@ -185,7 +185,7 @@ const Architect = () => {
                 <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{workflow.description}</p>
               </div>
             </div>
-            <PromptBox label="Claude Prompt">
+            <PromptBox label="AI Prompt">
               {workflow.prompt}
             </PromptBox>
           </div>
@@ -230,7 +230,7 @@ const Architect = () => {
 
       <Card>
         <CardTitle icon="🎯">Architecture Principles Enforcement</CardTitle>
-        <PromptBox label="Claude as Architecture Guardian">
+        <PromptBox label="AI as Architecture Guardian">
 {`"As our Architecture Guardian, continuously check:
 
 1. STRUCTURE

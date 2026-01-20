@@ -42,13 +42,13 @@ export const navigation = [
   { id: 'continuous-flow', icon: Waves, label: 'Continuous Flow', section: 'Process', path: '/continuous-flow' },
   { id: 'work-management', icon: ClipboardList, label: 'Beyond Jira & Kanban', section: 'Process', path: '/work-management' },
 
-  // Roles & Claude
-  { id: 'role-po', icon: User, label: 'Product Owner', section: 'Roles & Claude', path: '/roles/product-owner' },
-  { id: 'role-dev', icon: Code, label: 'Developer', section: 'Roles & Claude', path: '/roles/developer' },
-  { id: 'role-qe', icon: TestTube, label: 'QE Engineer', section: 'Roles & Claude', path: '/roles/qe-engineer' },
-  { id: 'role-devops', icon: Settings, label: 'DevOps / Platform', section: 'Roles & Claude', path: '/roles/devops' },
-  { id: 'role-architect', icon: Building, label: 'Architect', section: 'Roles & Claude', path: '/roles/architect' },
-  { id: 'role-scrum', icon: Target, label: 'Scrum Master / Coach', section: 'Roles & Claude', path: '/roles/scrum-master' },
+  // Roles & AI Agents
+  { id: 'role-po', icon: User, label: 'Product Owner', section: 'Roles & AI Agents', path: '/roles/product-owner' },
+  { id: 'role-dev', icon: Code, label: 'Developer', section: 'Roles & AI Agents', path: '/roles/developer' },
+  { id: 'role-qe', icon: TestTube, label: 'QE Engineer', section: 'Roles & AI Agents', path: '/roles/qe-engineer' },
+  { id: 'role-devops', icon: Settings, label: 'DevOps / Platform', section: 'Roles & AI Agents', path: '/roles/devops' },
+  { id: 'role-architect', icon: Building, label: 'Architect', section: 'Roles & AI Agents', path: '/roles/architect' },
+  { id: 'role-scrum', icon: Target, label: 'Scrum Master / Coach', section: 'Roles & AI Agents', path: '/roles/scrum-master' },
 
   // Setup & Execute
   { id: 'setup-quick', icon: Zap, label: 'Quick Start (5 min)', section: 'Setup & Execute', path: '/setup/quick-start' },

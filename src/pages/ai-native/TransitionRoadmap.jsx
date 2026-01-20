@@ -37,7 +37,7 @@ const TransitionRoadmap = () => {
             { task: 'Select pilot team (ideally full-stack squad)', status: 'critical' },
             { task: 'Train team on the 10-step agentic flow', status: 'critical' },
             { task: 'Establish the 3 human checkpoint gates', status: 'critical' },
-            { task: 'Create team-specific CLAUDE.md configurations', status: 'normal' },
+            { task: 'Create team-specific AI-CONFIG.md configurations', status: 'normal' },
             { task: 'Identify AI champions within the team', status: 'normal' }
           ]
         },

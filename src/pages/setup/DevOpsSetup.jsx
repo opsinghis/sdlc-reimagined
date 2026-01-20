@@ -11,7 +11,7 @@ const DevOpsSetup = () => {
     <div>
       <PageHeader
         title="⚙️ DevOps / Platform Engineer Setup"
-        description="Configure Claude for infrastructure and operations"
+        description="Configure AI for infrastructure and operations"
       />
 
       {/* Context: Where this fits in the agentic flow */}
@@ -38,10 +38,10 @@ const DevOpsSetup = () => {
       </Card>
 
       <Card>
-        <CardTitle icon="📄">Step 1: Create DevOps CLAUDE.md</CardTitle>
+        <CardTitle icon="📄">Step 1: Create DevOps AI-CONFIG.md</CardTitle>
 
-        <CodeBlock language="markdown" filename="CLAUDE-DEVOPS.md">
-{`# CLAUDE.md - DevOps/Platform Engineer Configuration
+        <CodeBlock language="markdown" filename="AI-CONFIG-DEVOPS.md">
+{`# AI-CONFIG.md - DevOps/Platform Engineer Configuration
 
 ## Role
 You are an AI infrastructure and operations assistant. You help with IaC, CI/CD, monitoring, and incident response.
@@ -120,35 +120,35 @@ infrastructure/
       <Card>
         <CardTitle icon="📚">Step 2: DevOps Prompt Library</CardTitle>
 
-        <CodeBlock language="bash" filename=".claude-devops-aliases.sh">
+        <CodeBlock language="bash" filename=".ai-devops-aliases.sh">
 {`# DevOps/Platform Aliases
 
 # ===== INFRASTRUCTURE =====
 
 # Generate Terraform
-alias ctf='claude "Generate Terraform code for this infrastructure requirement. Follow our module patterns and security standards:"'
+alias ctf='ai "Generate Terraform code for this infrastructure requirement. Follow our module patterns and security standards:"'
 
 # Generate Kubernetes manifests
-alias ck8s='claude "Generate Kubernetes manifests for this service. Include: Deployment, Service, ConfigMap, HPA, PDB, NetworkPolicy:"'
+alias ck8s='ai "Generate Kubernetes manifests for this service. Include: Deployment, Service, ConfigMap, HPA, PDB, NetworkPolicy:"'
 
 # Generate Helm chart
-alias chelm='claude "Create a Helm chart for this application with configurable values for dev/staging/prod:"'
+alias chelm='ai "Create a Helm chart for this application with configurable values for dev/staging/prod:"'
 
 # Dockerfile generation
-alias cdocker='claude "Create an optimized, secure Dockerfile for this application. Use multi-stage builds and non-root user:"'
+alias cdocker='ai "Create an optimized, secure Dockerfile for this application. Use multi-stage builds and non-root user:"'
 
 # ===== CI/CD =====
 
 # Generate GitHub Actions workflow
-alias cgha='claude "Create a GitHub Actions workflow for this project. Include: build, test, security scan, deploy stages:"'
+alias cgha='ai "Create a GitHub Actions workflow for this project. Include: build, test, security scan, deploy stages:"'
 
 # Pipeline troubleshooting
-alias cpipeline='claude "Debug this CI/CD pipeline failure. Identify root cause and suggest fix:"'
+alias cpipeline='ai "Debug this CI/CD pipeline failure. Identify root cause and suggest fix:"'
 
 # ===== INCIDENT RESPONSE =====
 
 # Incident analysis
-alias cincident='claude "Analyze this incident:
+alias cincident='ai "Analyze this incident:
 - Alert/Error: [paste here]
 - Affected service:
 - Time started:
@@ -160,24 +160,24 @@ Provide:
 4. Rollback procedure if needed"'
 
 # Generate runbook
-alias crunbook='claude "Create a runbook for this scenario. Include: symptoms, diagnosis steps, resolution steps, escalation criteria:"'
+alias crunbook='ai "Create a runbook for this scenario. Include: symptoms, diagnosis steps, resolution steps, escalation criteria:"'
 
 # Post-mortem
-alias cpostmortem='claude "Generate a post-mortem document for this incident. Include: timeline, root cause, impact, action items:"'
+alias cpostmortem='ai "Generate a post-mortem document for this incident. Include: timeline, root cause, impact, action items:"'
 
 # ===== MONITORING =====
 
 # Alert rules
-alias calert='claude "Create alerting rules (Prometheus/Datadog) for this service. Include appropriate thresholds and runbook links:"'
+alias calert='ai "Create alerting rules (Prometheus/Datadog) for this service. Include appropriate thresholds and runbook links:"'
 
 # Dashboard
-alias cdashboard='claude "Create a Grafana dashboard JSON for monitoring this service. Include: golden signals, business metrics, dependencies:"'
+alias cdashboard='ai "Create a Grafana dashboard JSON for monitoring this service. Include: golden signals, business metrics, dependencies:"'
 
 # ===== FUNCTIONS =====
 
 # ITOps Agent - Auto-remediation
 itops_analyze() {
-    claude "You are an ITOps agent. Analyze this alert and determine action:
+    ai "You are an ITOps agent. Analyze this alert and determine action:
 
     Alert: $1
 
@@ -196,7 +196,7 @@ itops_analyze() {
 }
 
 # Cost analysis
-alias ccost='claude "Analyze these AWS/GCP costs and identify optimization opportunities. Consider: right-sizing, reserved instances, spot instances, unused resources:"'`}
+alias ccost='ai "Analyze these AWS/GCP costs and identify optimization opportunities. Consider: right-sizing, reserved instances, spot instances, unused resources:"'`}
         </CodeBlock>
       </Card>
 
@@ -208,9 +208,9 @@ alias ccost='claude "Analyze these AWS/GCP costs and identify optimization oppor
 {`// ITOps Agent - Automated Incident Response
 // Run with: node itops-agent/index.js
 
-const Anthropic = require('@anthropic-ai/sdk');
+const AIClient = require('@your-ai/sdk');
 
-const anthropic = new Anthropic();
+const aiClient = new AIClient();
 
 // Runbook definitions
 const RUNBOOKS = {
@@ -237,8 +237,8 @@ const RUNBOOKS = {
 };
 
 async function analyzeAlert(alert) {
-  const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-20250514',
+  const response = await aiClient.messages.create({
+    model: 'your-ai-model',
     max_tokens: 1024,
     system: \`You are an ITOps agent. Analyze alerts and recommend actions.
 

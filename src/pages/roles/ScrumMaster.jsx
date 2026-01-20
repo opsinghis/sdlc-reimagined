@@ -89,7 +89,7 @@ const ScrumMaster = () => {
   return (
     <div>
       <PageHeader
-        title="🎯 Scrum Master / Agile Coach with Claude"
+        title="🎯 Scrum Master / Agile Coach with AI"
         description="From ceremony facilitator to transformation coach"
       />
 
@@ -169,7 +169,7 @@ const ScrumMaster = () => {
       </Card>
 
       <Card>
-        <CardTitle icon="🛠️">Claude-Powered Coaching Workflows</CardTitle>
+        <CardTitle icon="🛠️">AI-Powered Coaching Workflows</CardTitle>
 
         {workflows.map((workflow, index) => (
           <div key={index} style={{
@@ -185,7 +185,7 @@ const ScrumMaster = () => {
                 <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{workflow.description}</p>
               </div>
             </div>
-            <PromptBox label="Claude Prompt">
+            <PromptBox label="AI Prompt">
               {workflow.prompt}
             </PromptBox>
           </div>

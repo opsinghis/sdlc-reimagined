@@ -86,7 +86,7 @@ Provide specific line-by-line feedback."`
   return (
     <div>
       <PageHeader
-        title="👨‍💻 Developer with Claude"
+        title="👨‍💻 Developer with AI"
         description="From coder to AI orchestrator"
       />
 
@@ -166,7 +166,7 @@ Provide specific line-by-line feedback."`
       </Card>
 
       <Card>
-        <CardTitle icon="🛠️">Claude-Powered Developer Workflows</CardTitle>
+        <CardTitle icon="🛠️">AI-Powered Developer Workflows</CardTitle>
 
         {workflows.map((workflow, index) => (
           <div key={index} style={{
@@ -182,7 +182,7 @@ Provide specific line-by-line feedback."`
                 <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{workflow.description}</p>
               </div>
             </div>
-            <PromptBox label="Claude Prompt">
+            <PromptBox label="AI Prompt">
               {workflow.prompt}
             </PromptBox>
           </div>
@@ -191,30 +191,30 @@ Provide specific line-by-line feedback."`
 
       <Card>
         <CardTitle icon="⚡">Quick Commands</CardTitle>
-        <CodeBlock language="bash" filename="claude-dev-aliases.sh">
+        <CodeBlock language="bash" filename="ai-dev-aliases.sh">
 {`# Feature Implementation
-alias cf='claude "Implement the following feature based on the ticket requirements:"'
+alias cf='ai "Implement the following feature based on the ticket requirements:"'
 
 # Bug Fix
-alias cbug='claude "Investigate and fix this bug. Write a failing test first:"'
+alias cbug='ai "Investigate and fix this bug. Write a failing test first:"'
 
 # Code Review
-alias creview='claude "Review my staged changes for bugs, security, and style:"'
+alias creview='ai "Review my staged changes for bugs, security, and style:"'
 
 # Refactoring
-alias crefactor='claude "Refactor this code to improve readability and performance:"'
+alias crefactor='ai "Refactor this code to improve readability and performance:"'
 
 # Test Generation
-alias ctest='claude "Generate comprehensive tests for this code:"'
+alias ctest='ai "Generate comprehensive tests for this code:"'
 
 # Documentation
-alias cdocs='claude "Generate documentation for this module:"'
+alias cdocs='ai "Generate documentation for this module:"'
 
 # Explain Code
-alias cexplain='claude "Explain how this code works and identify issues:"'
+alias cexplain='ai "Explain how this code works and identify issues:"'
 
 # PR Description
-alias cpr='claude "Generate a PR description from my changes:"'`}
+alias cpr='ai "Generate a PR description from my changes:"'`}
         </CodeBlock>
       </Card>
 

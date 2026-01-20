@@ -164,7 +164,7 @@ const Transformation = () => {
             }}>
               <span style={{ fontSize: '2rem' }}>🤖</span>
               <div>
-                <div style={{ fontWeight: '700', fontSize: '1.2rem' }}>TRANSFORM WITH CLAUDE</div>
+                <div style={{ fontWeight: '700', fontSize: '1.2rem' }}>TRANSFORM WITH AI</div>
                 <div style={{ fontSize: '0.85rem', opacity: 0.9 }}>9 phases → 3 phases | 17 weeks → 4 weeks</div>
               </div>
               <span style={{ fontSize: '2rem' }}>⬇️</span>
@@ -526,7 +526,7 @@ const Transformation = () => {
                 fontSize: '0.7rem',
                 fontWeight: '600',
                 color: 'var(--accent-purple)'
-              }}>WITH CLAUDE</div>
+              }}>WITH AI</div>
             </div>
 
             {/* AI-Native */}

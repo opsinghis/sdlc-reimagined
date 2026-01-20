@@ -29,7 +29,7 @@ const MCPIntegrations = () => {
     <div>
       <PageHeader
         title="🔌 MCP Integrations Setup"
-        description="Connect Claude to your tools via Model Context Protocol"
+        description="Connect AI Agents to your tools via Model Context Protocol"
       />
 
       {/* Context: Where this fits in the agentic flow */}
@@ -57,14 +57,14 @@ const MCPIntegrations = () => {
       <Card>
         <CardTitle icon="📋">What is MCP?</CardTitle>
         <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-          Model Context Protocol (MCP) allows Claude to connect to external tools and data sources. This enables Claude to read from Jira, GitHub, Slack, databases, and more.
+          Model Context Protocol (MCP) allows AI agents to connect to external tools and data sources. This enables them to read from Jira, GitHub, Slack, databases, and more.
         </p>
       </Card>
 
       <Card>
         <CardTitle icon="⚙️">Step 1: MCP Configuration File</CardTitle>
 
-        <CodeBlock language="json" filename="claude_desktop_config.json">
+        <CodeBlock language="json" filename="ai_assistant_config.json">
 {`{
   "mcpServers": {
     "github": {
@@ -119,19 +119,19 @@ const MCPIntegrations = () => {
 
         <CodeBlock language="bash">
 {`# MacOS
-~/Library/Application Support/Claude/claude_desktop_config.json
+~/Library/Application Support/AI-Assistant/config.json
 
 # Windows
-%APPDATA%\\Claude\\claude_desktop_config.json
+%APPDATA%\\AI-Assistant\\config.json
 
 # Linux
-~/.config/Claude/claude_desktop_config.json
+~/.config/AI-Assistant/config.json
 
 # Create directory if it doesn't exist
-mkdir -p "$(dirname ~/Library/Application\\ Support/Claude/claude_desktop_config.json)"
+mkdir -p "$(dirname ~/Library/Application\\ Support/AI-Assistant/config.json)"
 
 # Copy your config
-cp claude_desktop_config.json ~/Library/Application\\ Support/Claude/`}
+cp mcp_config.json ~/Library/Application\\ Support/AI-Assistant/`}
         </CodeBlock>
       </Card>
 
@@ -141,8 +141,8 @@ cp claude_desktop_config.json ~/Library/Application\\ Support/Claude/`}
       </Card>
 
       <Card>
-        <CardTitle icon="🚀">Step 4: Using MCP in Claude</CardTitle>
-        <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>Once configured, Claude can access these tools directly:</p>
+        <CardTitle icon="🚀">Step 4: Using MCP with AI Agents</CardTitle>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>Once configured, AI agents can access these tools directly:</p>
 
         <CodeBlock language="text">
 {`# Example prompts with MCP integrations:

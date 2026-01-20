@@ -14,7 +14,7 @@ const DeveloperSetup = () => {
       description: (
         <>
           <code>standup</code> - Generate standup from git activity<br/>
-          <code>claude "What should I focus on today based on my open PRs and assigned tickets?"</code>
+          <code>ai "What should I focus on today based on my open PRs and assigned tickets?"</code>
         </>
       )
     },
@@ -23,7 +23,7 @@ const DeveloperSetup = () => {
       description: (
         <>
           <code>feature TICKET-123-add-wishlist</code> - Start new feature<br/>
-          <code>claude "Implement the wishlist service based on the spec in docs/specs/wishlist.md"</code>
+          <code>ai "Implement the wishlist service based on the spec in docs/specs/wishlist.md"</code>
         </>
       )
     },
@@ -32,7 +32,7 @@ const DeveloperSetup = () => {
       description: (
         <>
           <code>ctest</code> - Generate tests for new code<br/>
-          <code>claude "Add edge case tests for the wishlist service"</code>
+          <code>ai "Add edge case tests for the wishlist service"</code>
         </>
       )
     },
@@ -60,7 +60,7 @@ const DeveloperSetup = () => {
     <div>
       <PageHeader
         title="👨‍💻 Developer Setup"
-        description="Complete Claude configuration for developers"
+        description="Complete AI assistant configuration for developers"
       />
 
       {/* Context: Where this fits in the agentic flow */}
@@ -87,11 +87,11 @@ const DeveloperSetup = () => {
       </Card>
 
       <Card>
-        <CardTitle icon="📄">Step 1: Create Developer CLAUDE.md</CardTitle>
+        <CardTitle icon="📄">Step 1: Create Developer AI-CONFIG.md</CardTitle>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>Place this file in your project root:</p>
 
-        <CodeBlock language="markdown" filename="CLAUDE.md">
-{`# CLAUDE.md - Developer Configuration
+        <CodeBlock language="markdown" filename="AI-CONFIG.md">
+{`# AI-CONFIG.md - Developer Configuration
 
 ## Role
 You are an AI pair programmer working with a senior developer on an enterprise application.
@@ -207,48 +207,48 @@ npm run typecheck # TypeScript check
         <CardTitle icon="📚">Step 2: Create Prompt Library</CardTitle>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>Save these as shell aliases or scripts:</p>
 
-        <CodeBlock language="bash" filename=".claude-aliases.sh">
+        <CodeBlock language="bash" filename=".ai-aliases.sh">
 {`# Add to your .bashrc or .zshrc
 
 # ===== DEVELOPMENT ALIASES =====
 
 # Feature Implementation
-alias cf='claude "Implement the following feature based on the ticket requirements. Follow our coding standards, add tests, and update documentation:"'
+alias cf='ai "Implement the following feature based on the ticket requirements. Follow our coding standards, add tests, and update documentation:"'
 
 # Bug Fix
-alias cbug='claude "Investigate and fix this bug. Write a failing test first, then implement the fix:"'
+alias cbug='ai "Investigate and fix this bug. Write a failing test first, then implement the fix:"'
 
 # Code Review
-alias creview='claude "Review my staged changes (git diff --staged). Check for: bugs, security issues, performance problems, style violations, missing tests. Suggest improvements:"'
+alias creview='ai "Review my staged changes (git diff --staged). Check for: bugs, security issues, performance problems, style violations, missing tests. Suggest improvements:"'
 
 # Refactoring
-alias crefactor='claude "Refactor the following code to improve readability, performance, and maintainability while preserving behavior:"'
+alias crefactor='ai "Refactor the following code to improve readability, performance, and maintainability while preserving behavior:"'
 
 # Test Generation
-alias ctest='claude "Generate comprehensive tests for the following code. Include unit tests, edge cases, and integration tests where appropriate:"'
+alias ctest='ai "Generate comprehensive tests for the following code. Include unit tests, edge cases, and integration tests where appropriate:"'
 
 # Documentation
-alias cdocs='claude "Generate documentation for this code including JSDoc comments, README updates, and usage examples:"'
+alias cdocs='ai "Generate documentation for this code including JSDoc comments, README updates, and usage examples:"'
 
 # Explain Code
-alias cexplain='claude "Explain how this code works, including the architecture decisions, data flow, and any potential issues:"'
+alias cexplain='ai "Explain how this code works, including the architecture decisions, data flow, and any potential issues:"'
 
 # Debug Help
-alias cdebug='claude "Help me debug this issue. Here are the error logs and relevant code:"'
+alias cdebug='ai "Help me debug this issue. Here are the error logs and relevant code:"'
 
 # PR Description
-alias cpr='claude "Generate a PR description for my changes (git diff main...HEAD). Include: summary, changes made, testing done, and any notes for reviewers:"'
+alias cpr='ai "Generate a PR description for my changes (git diff main...HEAD). Include: summary, changes made, testing done, and any notes for reviewers:"'
 
 # ===== QUICK COMMANDS =====
 
 # Interactive mode with context
-alias ci='claude --interactive'
+alias ci='ai --interactive'
 
 # Quick question
-alias cq='claude'
+alias cq='ai'
 
 # Continue last conversation
-alias cc='claude --continue'
+alias cc='ai --continue'
 
 # ===== WORKFLOW FUNCTIONS =====
 
@@ -256,17 +256,17 @@ alias cc='claude --continue'
 feature() {
     echo "🚀 Starting feature: $1"
     git checkout -b "feature/$1"
-    claude "I'm starting work on feature: $1. Analyze the requirements and suggest an implementation approach."
+    ai "I'm starting work on feature: $1. Analyze the requirements and suggest an implementation approach."
 }
 
 # Commit with AI message
 aicommit() {
-    claude "Generate a conventional commit message for these changes: $(git diff --staged)" | head -1 | xargs -I {} git commit -m "{}"
+    ai "Generate a conventional commit message for these changes: $(git diff --staged)" | head -1 | xargs -I {} git commit -m "{}"
 }
 
 # Daily standup prep
 standup() {
-    claude "Generate my standup update based on:
+    ai "Generate my standup update based on:
     - Yesterday's commits: $(git log --oneline --since='yesterday' --author=$(git config user.email))
     - Current branch: $(git branch --show-current)
     - Uncommitted changes: $(git status --short)"
@@ -280,23 +280,23 @@ standup() {
 
         <CodeBlock language="json" filename="vscode-settings.json">
 {`{
-    "claude.enabled": true,
-    "claude.autoContext": true,
-    "claude.includeOpenFiles": true,
+    "ai-assistant.enabled": true,
+    "ai-assistant.autoContext": true,
+    "ai-assistant.includeOpenFiles": true,
 
     // Terminal integration
     "terminal.integrated.env.osx": {
-        "ANTHROPIC_API_KEY": "\${env:ANTHROPIC_API_KEY}"
+        "AI_API_KEY": "\${env:AI_API_KEY}"
     },
 
     // Keyboard shortcuts (add to keybindings.json)
-    // Ctrl+Shift+C - Open Claude
+    // Ctrl+Shift+A - Open AI Assistant
     // Ctrl+Shift+E - Explain selection
     // Ctrl+Shift+T - Generate tests for selection
 
     // Recommended extensions
     "recommendations": [
-        "anthropic.claude-code",
+        "your-ai.assistant-extension",
         "github.copilot",
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint"
@@ -307,7 +307,7 @@ standup() {
 
       <Card>
         <CardTitle icon="🔄">Step 4: Git Hooks Setup</CardTitle>
-        <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>Automate Claude in your git workflow:</p>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>Automate AI in your git workflow:</p>
 
         <CodeBlock language="bash" filename="setup-git-hooks.sh">
 {`#!/bin/bash
@@ -329,7 +329,7 @@ if [ -z "$STAGED_DIFF" ]; then
 fi
 
 # Run quick AI check (optional - comment out if too slow)
-# claude "Quick review of these changes. Only report critical issues (security, bugs). Be brief:" <<< "$STAGED_DIFF"
+# ai "Quick review of these changes. Only report critical issues (security, bugs). Be brief:" <<< "$STAGED_DIFF"
 
 # Run standard checks
 npm run lint-staged
@@ -349,7 +349,7 @@ if [ -z "$COMMIT_SOURCE" ]; then
     echo "🤖 Generating commit message suggestion..."
 
     # Generate suggestion (uncomment to enable)
-    # SUGGESTION=$(claude "Generate a conventional commit message (feat/fix/docs/refactor) for: $STAGED_DIFF" 2>/dev/null | head -1)
+    # SUGGESTION=$(ai "Generate a conventional commit message (feat/fix/docs/refactor) for: $STAGED_DIFF" 2>/dev/null | head -1)
     # echo "$SUGGESTION" > "$COMMIT_MSG_FILE"
 fi
 EOF

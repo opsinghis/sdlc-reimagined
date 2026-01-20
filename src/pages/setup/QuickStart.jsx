@@ -12,7 +12,7 @@ const QuickStart = () => {
     <div>
       <PageHeader
         title="⚡ Quick Start Setup (5 minutes)"
-        description="Get Claude Code running on your laptop immediately"
+        description="Get your AI Coding Assistant running on your laptop immediately"
       />
 
       {/* Context: Where this fits in the agentic flow */}
@@ -31,7 +31,7 @@ const QuickStart = () => {
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>Setting Up for the Agentic SDLC</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
               This quick start gets you ready to work with AI agents in the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>.
-              Claude Code is your interface for collaborating with Product, Dev, QE, and DevOps agents at each of the <strong>3 human gates</strong>.
+              Your AI Coding Assistant is the interface for collaborating with Product, Dev, QE, and DevOps agents at each of the <strong>3 human gates</strong>.
             </p>
           </div>
         </div>
@@ -41,28 +41,28 @@ const QuickStart = () => {
         <CardTitle icon="📋">Prerequisites</CardTitle>
         <ul style={{ listStyle: 'none', fontSize: '0.95rem' }}>
           <li style={{ padding: '8px 0', borderBottom: '1px solid var(--border)' }}>✅ Node.js 18+ installed</li>
-          <li style={{ padding: '8px 0', borderBottom: '1px solid var(--border)' }}>✅ Anthropic API key (or Claude Pro subscription)</li>
+          <li style={{ padding: '8px 0', borderBottom: '1px solid var(--border)' }}>✅ AI Platform API key (or enterprise subscription)</li>
           <li style={{ padding: '8px 0', borderBottom: '1px solid var(--border)' }}>✅ Git installed</li>
           <li style={{ padding: '8px 0' }}>✅ VS Code or terminal access</li>
         </ul>
       </Card>
 
       <Card>
-        <CardTitle icon="🚀">Step 1: Install Claude Code</CardTitle>
+        <CardTitle icon="🚀">Step 1: Install AI Coding Assistant</CardTitle>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>Run this single command in your terminal:</p>
 
-        <CodeBlock language="bash" filename="install-claude.sh">
-{`# Install Claude Code globally
-npm install -g @anthropic-ai/claude-code
+        <CodeBlock language="bash" filename="install-ai-assistant.sh">
+{`# Install AI Coding Assistant globally
+npm install -g ai-coding-assistant
 
 # Verify installation
-claude --version
+ai --version
 
 # Authenticate (opens browser or enter API key)
-claude auth login
+ai auth login
 
 # Quick test
-claude "say hello"`}
+ai "say hello"`}
         </CodeBlock>
       </Card>
 
@@ -79,14 +79,14 @@ mkdir -p "$PROJECT_ROOT"
 cd "$PROJECT_ROOT"
 
 # Create directory structure
-mkdir -p .claude/{roles,prompts,mcp,workflows}
+mkdir -p .ai/{roles,prompts,mcp,workflows}
 mkdir -p docs/{adr,specs,runbooks}
 mkdir -p scripts/{setup,automation}
 mkdir -p templates/{stories,tests,docs}
 
-# Create main CLAUDE.md
-cat > CLAUDE.md << 'EOF'
-# Project Configuration for Claude
+# Create main AI-CONFIG.md
+cat > AI-CONFIG.md << 'EOF'
+# Project Configuration for AI Assistant
 
 ## Overview
 This project uses AI-assisted development workflows.
@@ -113,21 +113,21 @@ ls -la`}
       </Card>
 
       <Card>
-        <CardTitle icon="⚡">Step 3: First Claude Command</CardTitle>
-        <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>Navigate to any project and start using Claude:</p>
+        <CardTitle icon="⚡">Step 3: First AI Command</CardTitle>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '15px' }}>Navigate to any project and start using AI:</p>
 
         <CodeBlock language="bash">
 {`# Navigate to your project
 cd /path/to/your/project
 
 # Start interactive mode
-claude
+ai
 
 # Or run a specific task
-claude "analyze this codebase and create a README.md"
+ai "analyze this codebase and create a README.md"
 
 # Or ask a question
-claude "explain how the authentication flow works in this project"`}
+ai "explain how the authentication flow works in this project"`}
         </CodeBlock>
       </Card>
 
@@ -136,21 +136,21 @@ claude "explain how the authentication flow works in this project"`}
         <div style={{ display: 'grid', gap: '10px' }}>
           <div style={{ background: 'var(--bg-elevated)', padding: '15px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '10px' }}>
             <span style={{ color: 'var(--accent-green)' }}>□</span>
-            <span><code>claude --version</code> shows version number</span>
+            <span><code>ai --version</code> shows version number</span>
           </div>
           <div style={{ background: 'var(--bg-elevated)', padding: '15px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '10px' }}>
             <span style={{ color: 'var(--accent-green)' }}>□</span>
-            <span><code>claude "hello"</code> returns a response</span>
+            <span><code>ai "hello"</code> returns a response</span>
           </div>
           <div style={{ background: 'var(--bg-elevated)', padding: '15px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '10px' }}>
             <span style={{ color: 'var(--accent-green)' }}>□</span>
-            <span>CLAUDE.md file exists in project root</span>
+            <span>AI-CONFIG.md file exists in project root</span>
           </div>
         </div>
       </Card>
 
       <InfoBox variant="insight" title="Next Steps">
-        <p>Now set up your role-specific configuration. Choose your role from the sidebar to get customized CLAUDE.md files, prompts, and workflows.</p>
+        <p>Now set up your role-specific configuration. Choose your role from the sidebar to get customized AI-CONFIG.md files, prompts, and workflows.</p>
       </InfoBox>
     </div>
   );

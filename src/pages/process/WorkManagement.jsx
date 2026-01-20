@@ -41,7 +41,7 @@ const WorkManagement = () => {
       name: 'Jira + AI Layer',
       color: 'var(--accent-blue)',
       desc: 'Keep Jira, add AI automation',
-      features: ['Jira Automation + Claude API', 'Custom GPT for ticket creation', 'Webhook-based status updates'],
+      features: ['Jira Automation + AI API', 'Custom AI for ticket creation', 'Webhook-based status updates'],
       bestFor: 'Enterprise, compliance needs'
     },
     {
@@ -144,7 +144,7 @@ const WorkManagement = () => {
         <PromptBox label="Example: Intent to Tickets">
 {`PO says: "We need to add Apple Pay to checkout for UK customers"
 
-Claude generates:
+AI generates:
 ├── EPIC: Apple Pay Integration - UK
 │   ├── STORY: Apple Pay button on checkout page
 │   │   ├── TASK: Add Apple Pay SDK dependency
@@ -240,7 +240,7 @@ Risk: Apple developer account approval timeline`}
               borderRadius: '12px',
               fontWeight: '600'
             }}>
-              🤖 Claude AI Hub
+              🤖 AI Agent Hub
             </div>
             <span style={{ color: 'var(--text-muted)' }}>↔</span>
             <div style={{ padding: '15px 25px', background: 'var(--bg-card)', borderRadius: '8px', border: '1px solid var(--border)' }}>

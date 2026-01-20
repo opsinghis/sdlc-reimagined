@@ -11,7 +11,7 @@ const ArchitectSetup = () => {
     <div>
       <PageHeader
         title="🏗️ Architect Setup"
-        description="Configure Claude for architecture and technical leadership"
+        description="Configure AI for architecture and technical leadership"
       />
 
       {/* Context: Where this fits in the agentic flow */}
@@ -38,10 +38,10 @@ const ArchitectSetup = () => {
       </Card>
 
       <Card>
-        <CardTitle icon="📄">Step 1: Create Architect CLAUDE.md</CardTitle>
+        <CardTitle icon="📄">Step 1: Create Architect AI-CONFIG.md</CardTitle>
 
-        <CodeBlock language="markdown" filename="CLAUDE-ARCHITECT.md">
-{`# CLAUDE.md - Architect Configuration
+        <CodeBlock language="markdown" filename="AI-CONFIG-ARCHITECT.md">
+{`# AI-CONFIG.md - Architect Configuration
 
 ## Role
 You are an AI architecture assistant helping with system design, technical decisions, and documentation. You provide options with trade-offs rather than single recommendations.
@@ -124,55 +124,55 @@ You are an AI architecture assistant helping with system design, technical decis
       <Card>
         <CardTitle icon="📚">Step 2: Architect Prompt Library</CardTitle>
 
-        <CodeBlock language="bash" filename=".claude-architect-aliases.sh">
+        <CodeBlock language="bash" filename=".ai-architect-aliases.sh">
 {`# Architect Aliases
 
 # ===== DESIGN =====
 
 # System design
-alias cdesign='claude "Create a system design for this requirement. Include: C4 diagrams, component descriptions, data flow, technology choices with rationale:"'
+alias cdesign='ai "Create a system design for this requirement. Include: C4 diagrams, component descriptions, data flow, technology choices with rationale:"'
 
 # API design
-alias capi='claude "Design an API for this capability. Include: REST endpoints, request/response schemas, error handling, versioning strategy:"'
+alias capi='ai "Design an API for this capability. Include: REST endpoints, request/response schemas, error handling, versioning strategy:"'
 
 # Data model
-alias cdatamodel='claude "Design a data model for this domain. Include: ERD, entity descriptions, relationships, indexes, and migration considerations:"'
+alias cdatamodel='ai "Design a data model for this domain. Include: ERD, entity descriptions, relationships, indexes, and migration considerations:"'
 
 # ===== DECISIONS =====
 
 # ADR generation
-alias cadr='claude "Create an Architecture Decision Record for this decision. Include multiple options with trade-offs, not just the chosen approach:"'
+alias cadr='ai "Create an Architecture Decision Record for this decision. Include multiple options with trade-offs, not just the chosen approach:"'
 
 # Trade-off analysis
-alias ctradeoff='claude "Analyze trade-offs between these architectural options. Consider: complexity, scalability, cost, team skills, time to implement:"'
+alias ctradeoff='ai "Analyze trade-offs between these architectural options. Consider: complexity, scalability, cost, team skills, time to implement:"'
 
 # Technology evaluation
-alias ctech='claude "Evaluate this technology for our use case. Include: pros/cons, fit with our stack, learning curve, community/support, licensing:"'
+alias ctech='ai "Evaluate this technology for our use case. Include: pros/cons, fit with our stack, learning curve, community/support, licensing:"'
 
 # ===== ANALYSIS =====
 
 # Codebase analysis
-alias canalyze='claude "Analyze this codebase architecture. Identify: patterns used, coupling issues, improvement opportunities, technical debt:"'
+alias canalyze='ai "Analyze this codebase architecture. Identify: patterns used, coupling issues, improvement opportunities, technical debt:"'
 
 # Security review
-alias csecurity='claude "Review this architecture for security concerns. Check: authentication, authorization, data protection, network security, secrets management:"'
+alias csecurity='ai "Review this architecture for security concerns. Check: authentication, authorization, data protection, network security, secrets management:"'
 
 # Scalability assessment
-alias cscale='claude "Assess scalability of this architecture. Identify bottlenecks and recommend improvements for 10x growth:"'
+alias cscale='ai "Assess scalability of this architecture. Identify bottlenecks and recommend improvements for 10x growth:"'
 
 # ===== DOCUMENTATION =====
 
 # Architecture overview
-alias coverview='claude "Generate an architecture overview document. Include: context diagram, key decisions, component descriptions, deployment view:"'
+alias coverview='ai "Generate an architecture overview document. Include: context diagram, key decisions, component descriptions, deployment view:"'
 
 # Sequence diagrams
-alias csequence='claude "Generate Mermaid sequence diagrams for these key flows:"'
+alias csequence='ai "Generate Mermaid sequence diagrams for these key flows:"'
 
 # ===== FUNCTIONS =====
 
 # Full architecture review
 arch_review() {
-    claude "Perform a comprehensive architecture review:
+    ai "Perform a comprehensive architecture review:
 
     1. CURRENT STATE
        - Document existing architecture

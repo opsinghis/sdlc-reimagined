@@ -11,7 +11,7 @@ const QEEngineerSetup = () => {
     <div>
       <PageHeader
         title="🧪 QE Engineer Setup"
-        description="Configure Claude for quality engineering and test automation"
+        description="Configure AI for quality engineering and test automation"
       />
 
       {/* Context: Where this fits in the agentic flow */}
@@ -38,10 +38,10 @@ const QEEngineerSetup = () => {
       </Card>
 
       <Card>
-        <CardTitle icon="📄">Step 1: Create QE CLAUDE.md</CardTitle>
+        <CardTitle icon="📄">Step 1: Create QE AI-CONFIG.md</CardTitle>
 
-        <CodeBlock language="markdown" filename="CLAUDE-QE.md">
-{`# CLAUDE.md - QE Engineer Configuration
+        <CodeBlock language="markdown" filename="AI-CONFIG-QE.md">
+{`# AI-CONFIG.md - QE Engineer Configuration
 
 ## Role
 You are an AI QE assistant helping with test strategy, test automation, and quality analysis. You generate comprehensive tests and help maintain test infrastructure.
@@ -159,52 +159,52 @@ npm run test:e2e:headed    # E2E with browser visible
       <Card>
         <CardTitle icon="📚">Step 2: QE Prompt Library</CardTitle>
 
-        <CodeBlock language="bash" filename=".claude-qe-aliases.sh">
+        <CodeBlock language="bash" filename=".ai-qe-aliases.sh">
 {`# QE Engineer Aliases
 
 # ===== TEST GENERATION =====
 
 # Generate unit tests
-alias cunit='claude "Generate comprehensive unit tests for this code. Include happy path, edge cases, error scenarios. Use Jest and follow our conventions:"'
+alias cunit='ai "Generate comprehensive unit tests for this code. Include happy path, edge cases, error scenarios. Use Jest and follow our conventions:"'
 
 # Generate E2E tests
-alias ce2e='claude "Generate Playwright E2E tests for this user flow. Use Page Object Model pattern and our test conventions:"'
+alias ce2e='ai "Generate Playwright E2E tests for this user flow. Use Page Object Model pattern and our test conventions:"'
 
 # Generate integration tests
-alias cintegration='claude "Generate integration tests for this API/service. Include success cases, error handling, and edge cases:"'
+alias cintegration='ai "Generate integration tests for this API/service. Include success cases, error handling, and edge cases:"'
 
 # Generate from ticket
-alias ctickettest='claude "Generate all tests (unit, integration, E2E) for this user story. Cover all acceptance criteria:"'
+alias ctickettest='ai "Generate all tests (unit, integration, E2E) for this user story. Cover all acceptance criteria:"'
 
 # ===== TEST MAINTENANCE =====
 
 # Fix flaky test
-alias cflaky='claude "Analyze this flaky test and suggest fixes. Identify timing issues, race conditions, or test isolation problems:"'
+alias cflaky='ai "Analyze this flaky test and suggest fixes. Identify timing issues, race conditions, or test isolation problems:"'
 
 # Update selectors
-alias cselectors='claude "The UI has changed. Update these test selectors to use resilient patterns (prefer role, label, testid over CSS):"'
+alias cselectors='ai "The UI has changed. Update these test selectors to use resilient patterns (prefer role, label, testid over CSS):"'
 
 # Refactor tests
-alias ctestrefactor='claude "Refactor these tests to improve maintainability: reduce duplication, improve naming, add better assertions:"'
+alias ctestrefactor='ai "Refactor these tests to improve maintainability: reduce duplication, improve naming, add better assertions:"'
 
 # ===== ANALYSIS =====
 
 # Analyze failures
-alias cfailure='claude "Analyze these test failures. For each: 1) Is it a real bug or test issue? 2) Root cause? 3) Suggested fix:"'
+alias cfailure='ai "Analyze these test failures. For each: 1) Is it a real bug or test issue? 2) Root cause? 3) Suggested fix:"'
 
 # Coverage gaps
-alias ccoverage='claude "Analyze code coverage report and identify: 1) Critical uncovered paths, 2) Recommended tests to add, 3) Priority order:"'
+alias ccoverage='ai "Analyze code coverage report and identify: 1) Critical uncovered paths, 2) Recommended tests to add, 3) Priority order:"'
 
 # Test strategy
-alias cstrategy='claude "Create a test strategy for this feature. Include: test types needed, coverage goals, risk areas, and testing approach:"'
+alias cstrategy='ai "Create a test strategy for this feature. Include: test types needed, coverage goals, risk areas, and testing approach:"'
 
 # ===== PERFORMANCE =====
 
 # Generate load tests
-alias cloadtest='claude "Generate k6 performance tests for this API. Include: baseline load, peak load, stress test scenarios:"'
+alias cloadtest='ai "Generate k6 performance tests for this API. Include: baseline load, peak load, stress test scenarios:"'
 
 # Analyze performance
-alias cperfanalysis='claude "Analyze these performance test results. Identify bottlenecks and recommend optimizations:"'
+alias cperfanalysis='ai "Analyze these performance test results. Identify bottlenecks and recommend optimizations:"'
 
 # ===== FUNCTIONS =====
 
@@ -212,7 +212,7 @@ alias cperfanalysis='claude "Analyze these performance test results. Identify bo
 generate_tests_for_pr() {
     echo "🧪 Generating tests for PR changes..."
     CHANGED_FILES=$(git diff --name-only origin/main...HEAD)
-    claude "Generate tests for these changed files:
+    ai "Generate tests for these changed files:
     $CHANGED_FILES
 
     For each file:
@@ -220,12 +220,12 @@ generate_tests_for_pr() {
     2. Integration tests (if API)
     3. E2E tests (if user-facing)
 
-    Follow our testing conventions in CLAUDE.md"
+    Follow our testing conventions in AI-CONFIG.md"
 }
 
 # Test failure triage
 triage_failures() {
-    claude "Triage these test failures from CI:
+    ai "Triage these test failures from CI:
     $1
 
     For each failure:
@@ -237,7 +237,7 @@ triage_failures() {
 }
 
 # Generate test data
-alias ctestdata='claude "Generate test data/fixtures for this schema. Include: valid cases, boundary values, invalid cases, and edge cases:"'`}
+alias ctestdata='ai "Generate test data/fixtures for this schema. Include: valid cases, boundary values, invalid cases, and edge cases:"'`}
         </CodeBlock>
       </Card>
 
@@ -277,11 +277,11 @@ jobs:
         env:
           ANTHROPIC_API_KEY: \${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          # Install Claude CLI
-          npm install -g @anthropic-ai/claude-code
+          # Install AI CLI
+          npm install -g ai-coding-assistant
 
           # Generate test recommendations
-          claude "Analyze these changed files for test coverage:
+          ai "Analyze these changed files for test coverage:
           \${{ steps.changed.outputs.files }}
 
           1. Check if adequate tests exist

@@ -13,9 +13,9 @@ const TeamRollout = () => {
       title: 'Week 1: Pilot',
       description: (
         <>
-          • 2-3 developers start using Claude Code<br/>
+          • 2-3 developers start using AI Coding Assistant<br/>
           • Daily check-ins to gather feedback<br/>
-          • Refine CLAUDE.md and prompts<br/>
+          • Refine AI-CONFIG.md and prompts<br/>
           • Document common use cases
         </>
       )
@@ -59,7 +59,7 @@ const TeamRollout = () => {
     <div>
       <PageHeader
         title="👥 Full Team Rollout Guide"
-        description="Step-by-step guide to roll out Claude across your entire team"
+        description="Step-by-step guide to roll out AI tools across your entire team"
       />
 
       {/* Context: Where this fits in the agentic flow */}
@@ -92,7 +92,7 @@ const TeamRollout = () => {
           <div style={{ background: 'var(--bg-elevated)', padding: '15px', borderRadius: '8px' }}>
             <strong>□ API Access</strong>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '5px' }}>
-              Anthropic API key or Claude for Work subscription for team
+              AI Platform API key or enterprise subscription for team
             </p>
           </div>
           <div style={{ background: 'var(--bg-elevated)', padding: '15px', borderRadius: '8px' }}>
@@ -122,7 +122,7 @@ const TeamRollout = () => {
 
         <CodeBlock language="bash" filename="setup-team-member.sh">
 {`#!/bin/bash
-# Team Member Claude Setup Script
+# Team Member AI Assistant Setup Script
 # Usage: ./setup-team-member.sh <role> <project-path>
 
 ROLE=$1
@@ -134,52 +134,52 @@ if [ -z "$ROLE" ] || [ -z "$PROJECT_PATH" ]; then
     exit 1
 fi
 
-echo "🚀 Setting up Claude for $ROLE..."
+echo "🚀 Setting up AI Assistant for $ROLE..."
 
-# 1. Install Claude Code
-echo "📦 Installing Claude Code..."
-npm install -g @anthropic-ai/claude-code
+# 1. Install AI Coding Assistant
+echo "📦 Installing AI Coding Assistant..."
+npm install -g ai-coding-assistant
 
 # 2. Create project structure
 echo "📁 Creating project structure..."
 cd "$PROJECT_PATH"
-mkdir -p .claude/{prompts,workflows}
+mkdir -p .ai/{prompts,workflows}
 
-# 3. Download role-specific CLAUDE.md
+# 3. Download role-specific AI-CONFIG.md
 echo "📄 Setting up role configuration..."
-CLAUDE_MD_URL="https://raw.githubusercontent.com/your-org/claude-configs/main/roles/$ROLE/CLAUDE.md"
+CONFIG_URL="https://raw.githubusercontent.com/your-org/ai-configs/main/roles/$ROLE/AI-CONFIG.md"
 # In practice, copy from your internal repo
-# curl -o CLAUDE.md "$CLAUDE_MD_URL"
+# curl -o AI-CONFIG.md "$CONFIG_URL"
 
 # 4. Set up aliases
 echo "⚡ Setting up aliases..."
-ALIAS_FILE="$HOME/.claude-aliases-$ROLE.sh"
+ALIAS_FILE="$HOME/.ai-aliases-$ROLE.sh"
 cat > "$ALIAS_FILE" << 'ALIASES'
 # Role-specific aliases will be added here based on role
 # See the role-specific setup pages for content
 ALIASES
 
 # Add to shell config
-if ! grep -q "claude-aliases" ~/.zshrc 2>/dev/null; then
+if ! grep -q "ai-aliases" ~/.zshrc 2>/dev/null; then
     echo "source $ALIAS_FILE" >> ~/.zshrc
 fi
-if ! grep -q "claude-aliases" ~/.bashrc 2>/dev/null; then
+if ! grep -q "ai-aliases" ~/.bashrc 2>/dev/null; then
     echo "source $ALIAS_FILE" >> ~/.bashrc
 fi
 
 # 5. Verify installation
 echo "✅ Verifying installation..."
-claude --version
+ai --version
 
 echo ""
 echo "✨ Setup complete!"
 echo ""
 echo "Next steps:"
 echo "1. Run: source ~/.zshrc (or restart terminal)"
-echo "2. Run: claude auth login"
-echo "3. Test: claude 'hello world'"
+echo "2. Run: ai auth login"
+echo "3. Test: ai 'hello world'"
 echo ""
-echo "📚 Documentation: https://your-internal-docs/claude-guide"`}
+echo "📚 Documentation: https://your-internal-docs/ai-guide"`}
         </CodeBlock>
       </Card>
 
@@ -194,7 +194,7 @@ echo "📚 Documentation: https://your-internal-docs/claude-guide"`}
         <CodeBlock language="markdown" filename="metrics-template.md">
 {`# AI-SDLC Transformation Metrics
 
-## Baseline (Before Claude)
+## Baseline (Before AI Integration)
 - Sprint velocity: ___ points
 - Cycle time (commit to deploy): ___ hours
 - PR review time: ___ hours

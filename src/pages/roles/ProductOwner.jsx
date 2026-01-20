@@ -54,7 +54,7 @@ const ProductOwner = () => {
   return (
     <div>
       <PageHeader
-        title="👤 Product Owner with Claude"
+        title="👤 Product Owner with AI"
         description="From ticket writer to strategic product leader"
       />
 
@@ -128,7 +128,7 @@ const ProductOwner = () => {
       </Card>
 
       <Card>
-        <CardTitle icon="🛠️">Claude-Powered PO Workflows</CardTitle>
+        <CardTitle icon="🛠️">AI-Powered PO Workflows</CardTitle>
 
         {workflows.map((workflow, index) => (
           <div key={index} style={{
@@ -147,7 +147,7 @@ const ProductOwner = () => {
             {workflow.detail && (
               <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '15px' }}>{workflow.detail}</p>
             )}
-            <PromptBox label="Claude Prompt">
+            <PromptBox label="AI Prompt">
               {workflow.prompt}
             </PromptBox>
           </div>

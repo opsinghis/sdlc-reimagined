@@ -92,8 +92,8 @@ const Data = () => {
 
       <Card>
         <CardTitle icon="⚙️">Tech Stack Context</CardTitle>
-        <CodeBlock language="markdown" filename="CLAUDE-data.md">
-{`# Data Team CLAUDE.md
+        <CodeBlock language="markdown" filename="AI-CONFIG-data.md">
+{`# Data Team AI-CONFIG.md
 
 ## Tech Stack
 - Warehouse: Snowflake / BigQuery / Databricks
@@ -137,7 +137,7 @@ const Data = () => {
               <span style={{ fontSize: '1.5rem' }}>{workflow.icon}</span>
               <h4 style={{ margin: 0 }}>{workflow.title}</h4>
             </div>
-            <PromptBox label="Claude Prompt">
+            <PromptBox label="AI Prompt">
               {workflow.prompt}
             </PromptBox>
           </div>
@@ -148,28 +148,28 @@ const Data = () => {
         <CardTitle icon="📋">Quick Commands</CardTitle>
         <CodeBlock language="bash" filename="data-aliases.sh">
 {`# dbt model generation
-alias cdbt='claude "Create a dbt model for:"'
+alias cdbt='ai "Create a dbt model for:"'
 
 # SQL optimization
-alias csql='claude "Optimize this SQL query for Snowflake:"'
+alias csql='ai "Optimize this SQL query for Snowflake:"'
 
 # Pipeline creation
-alias cpipe='claude "Create an Airflow DAG for:"'
+alias cpipe='ai "Create an Airflow DAG for:"'
 
 # Data quality
-alias cquality='claude "Add data quality checks for:"'
+alias cquality='ai "Add data quality checks for:"'
 
 # Schema documentation
-alias cschema='claude "Document this data model:"'
+alias cschema='ai "Document this data model:"'
 
 # Metric definition
-alias cmetric='claude "Define this business metric with SQL:"'
+alias cmetric='ai "Define this business metric with SQL:"'
 
 # Debug pipeline
-alias cdebug='claude "Debug this data pipeline failure:"'
+alias cdebug='ai "Debug this data pipeline failure:"'
 
 # Privacy compliance
-alias cprivacy='claude "Implement privacy controls for:"'`}
+alias cprivacy='ai "Implement privacy controls for:"'`}
         </CodeBlock>
       </Card>
 

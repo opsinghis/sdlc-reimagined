@@ -89,7 +89,7 @@ const DevOps = () => {
   return (
     <div>
       <PageHeader
-        title="⚙️ DevOps / Platform with Claude"
+        title="⚙️ DevOps / Platform with AI"
         description="From script runner to platform architect"
       />
 
@@ -169,7 +169,7 @@ const DevOps = () => {
       </Card>
 
       <Card>
-        <CardTitle icon="🛠️">Claude-Powered DevOps Workflows</CardTitle>
+        <CardTitle icon="🛠️">AI-Powered DevOps Workflows</CardTitle>
 
         {workflows.map((workflow, index) => (
           <div key={index} style={{
@@ -185,7 +185,7 @@ const DevOps = () => {
                 <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{workflow.description}</p>
               </div>
             </div>
-            <PromptBox label="Claude Prompt">
+            <PromptBox label="AI Prompt">
               {workflow.prompt}
             </PromptBox>
           </div>

@@ -93,8 +93,8 @@ const Commerce = () => {
 
       <Card>
         <CardTitle icon="⚙️">Tech Stack Context</CardTitle>
-        <CodeBlock language="markdown" filename="CLAUDE-commerce.md">
-{`# Commerce Team CLAUDE.md
+        <CodeBlock language="markdown" filename="AI-CONFIG-commerce.md">
+{`# Commerce Team AI-CONFIG.md
 
 ## Platform
 - Commerce Engine: Custom / commercetools / Shopify Plus
@@ -136,7 +136,7 @@ const Commerce = () => {
               <span style={{ fontSize: '1.5rem' }}>{workflow.icon}</span>
               <h4 style={{ margin: 0 }}>{workflow.title}</h4>
             </div>
-            <PromptBox label="Claude Prompt">
+            <PromptBox label="AI Prompt">
               {workflow.prompt}
             </PromptBox>
           </div>

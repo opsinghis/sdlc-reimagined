@@ -180,7 +180,7 @@ const ContinuousFlow = () => {
       </Card>
 
       <Card>
-        <CardTitle icon="🛠️">Enabling Continuous Flow with Claude</CardTitle>
+        <CardTitle icon="🛠️">Enabling Continuous Flow with AI</CardTitle>
 
         <PromptBox label="Daily Flow Management Prompt">
 {`"As our Flow Manager, analyze current state and provide:

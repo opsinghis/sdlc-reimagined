@@ -92,8 +92,8 @@ const Backend = () => {
 
       <Card>
         <CardTitle icon="⚙️">Tech Stack Context</CardTitle>
-        <CodeBlock language="markdown" filename="CLAUDE-backend.md">
-{`# Backend Team CLAUDE.md
+        <CodeBlock language="markdown" filename="AI-CONFIG-backend.md">
+{`# Backend Team AI-CONFIG.md
 
 ## Tech Stack
 - Node.js with TypeScript / Java with Spring Boot
@@ -142,7 +142,7 @@ src/
               <span style={{ fontSize: '1.5rem' }}>{workflow.icon}</span>
               <h4 style={{ margin: 0 }}>{workflow.title}</h4>
             </div>
-            <PromptBox label="Claude Prompt">
+            <PromptBox label="AI Prompt">
               {workflow.prompt}
             </PromptBox>
           </div>
@@ -153,28 +153,28 @@ src/
         <CardTitle icon="📋">Quick Commands</CardTitle>
         <CodeBlock language="bash" filename="backend-aliases.sh">
 {`# API endpoint
-alias capi='claude "Create a REST API endpoint with full stack implementation:"'
+alias capi='ai "Create a REST API endpoint with full stack implementation:"'
 
 # Database migration
-alias cmigrate='claude "Create a database migration for:"'
+alias cmigrate='ai "Create a database migration for:"'
 
 # Service scaffolding
-alias cservice='claude "Scaffold a new microservice for:"'
+alias cservice='ai "Scaffold a new microservice for:"'
 
 # Event implementation
-alias cevent='claude "Implement event publishing/consuming for:"'
+alias cevent='ai "Implement event publishing/consuming for:"'
 
 # Query optimization
-alias cquery='claude "Optimize this database query:"'
+alias cquery='ai "Optimize this database query:"'
 
 # Integration test
-alias cintegration='claude "Write integration tests for this service:"'
+alias cintegration='ai "Write integration tests for this service:"'
 
 # API documentation
-alias cdoc='claude "Generate OpenAPI documentation for:"'
+alias cdoc='ai "Generate OpenAPI documentation for:"'
 
 # Debug production issue
-alias cdebug='claude "Help debug this production issue:"'`}
+alias cdebug='ai "Help debug this production issue:"'`}
         </CodeBlock>
       </Card>
 

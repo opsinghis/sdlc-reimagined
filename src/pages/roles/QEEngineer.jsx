@@ -90,7 +90,7 @@ Output as fixtures we can use in tests."`
   return (
     <div>
       <PageHeader
-        title="🧪 QE Engineer with Claude"
+        title="🧪 QE Engineer with AI"
         description="From test writer to quality strategist"
       />
 
@@ -170,7 +170,7 @@ Output as fixtures we can use in tests."`
       </Card>
 
       <Card>
-        <CardTitle icon="🛠️">Claude-Powered QE Workflows</CardTitle>
+        <CardTitle icon="🛠️">AI-Powered QE Workflows</CardTitle>
 
         {workflows.map((workflow, index) => (
           <div key={index} style={{
@@ -186,7 +186,7 @@ Output as fixtures we can use in tests."`
                 <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{workflow.description}</p>
               </div>
             </div>
-            <PromptBox label="Claude Prompt">
+            <PromptBox label="AI Prompt">
               {workflow.prompt}
             </PromptBox>
           </div>

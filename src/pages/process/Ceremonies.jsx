@@ -89,7 +89,7 @@ const Ceremonies = () => {
         ]
       },
       prompt: {
-        label: 'Claude Prompt for PI Prep',
+        label: 'AI Prompt for PI Prep',
         content: `"Based on our Q2 OKRs [attached], analyze our codebase and:
 1. Break down each objective into epics and features
 2. Identify cross-team dependencies from code imports
@@ -149,7 +149,7 @@ const Ceremonies = () => {
         ]
       },
       prompt: {
-        label: 'Claude Daily Digest Generation',
+        label: 'AI Daily Digest Generation',
         content: `"Generate today's team status from:
 - Git commits from last 24 hours
 - PR activity and reviews
@@ -207,7 +207,7 @@ Flag anything stale >2 days or blocked >1 day"`
         ]
       },
       prompt: {
-        label: 'Claude Retro Analysis',
+        label: 'AI Retro Analysis',
         content: `"Analyze the last 2 weeks:
 1. Compare planned vs delivered (from tickets)
 2. Identify top 3 blockers by time impact

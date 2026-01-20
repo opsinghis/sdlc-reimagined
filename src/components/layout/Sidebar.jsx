@@ -111,7 +111,7 @@ const Sidebar = ({ isOpen, onClose }) => {
             color: 'var(--text-muted)',
             textAlign: 'center'
           }}>
-            Powered by Claude AI
+            Powered by AI Agents
           </div>
         </div>
       </aside>
