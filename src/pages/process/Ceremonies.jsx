@@ -253,6 +253,15 @@ Flag anything stale >2 days or blocked >1 day"`
     { ceremony: 'Refinement', traditional: '1 hr/week', aiNative: '0.5 hr/week', savings: '-50%' },
   ];
 
+  const agentCeremonyRoles = [
+    { ceremony: 'PI Planning', agent: 'Product Agent + Orchestrator', role: 'Pre-generates feature breakdown, dependencies, estimates from OKRs' },
+    { ceremony: 'Sprint Planning', agent: 'Orchestrator Agent', role: 'Maintains real-time backlog state, auto-assigns based on skills' },
+    { ceremony: 'Daily Standup', agent: 'Orchestrator Agent', role: 'Generates async digest from commits, PRs, ticket movements' },
+    { ceremony: 'Sprint Review', agent: 'Doc Agent', role: 'Auto-generates demo videos, release notes from PRs' },
+    { ceremony: 'Retrospective', agent: 'Analytics Agent', role: 'Analyzes velocity, blockers, patterns across sprints' },
+    { ceremony: 'Refinement', agent: 'Product Agent', role: 'Auto-refines stories with AC, estimates from codebase' },
+  ];
+
   return (
     <div>
       <PageHeader
@@ -292,6 +301,70 @@ Flag anything stale >2 days or blocked >1 day"`
             </TableRow>
           </TableBody>
         </Table>
+      </Card>
+
+      {/* AI Agents Powering Ceremony Transformation */}
+      <Card>
+        <CardTitle icon="🤖">AI Agents Powering the Transformation</CardTitle>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
+          Each ceremony transformation is enabled by specialized AI agents that handle the heavy lifting previously done in meetings.
+        </p>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableHeader>Ceremony</TableHeader>
+              <TableHeader>AI Agent</TableHeader>
+              <TableHeader>What the Agent Does</TableHeader>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {agentCeremonyRoles.map((row, i) => (
+              <TableRow key={i}>
+                <TableCell>{row.ceremony}</TableCell>
+                <TableCell><Badge variant="transformed">{row.agent}</Badge></TableCell>
+                <TableCell style={{ fontSize: '0.85rem' }}>{row.role}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+
+        <InfoBox variant="insight" title="From Synchronous to Async-First">
+          The Orchestrator Agent continuously monitors all work streams, making synchronous meetings obsolete for status updates.
+          Humans only sync for decisions that require judgment, relationships, or strategic alignment - not for information sharing.
+        </InfoBox>
+      </Card>
+
+      {/* What Remains Human */}
+      <Card>
+        <CardTitle icon="👥">What Remains Deeply Human</CardTitle>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
+          While AI handles information gathering and preparation, certain aspects of ceremonies remain human-centered:
+        </p>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: '15px'
+        }}>
+          {[
+            { icon: '🎯', title: 'Strategic Decisions', desc: 'Prioritization trade-offs, roadmap direction' },
+            { icon: '🤝', title: 'Team Bonding', desc: 'Social connection, trust building, culture' },
+            { icon: '💡', title: 'Creative Sessions', desc: 'Brainstorming, innovation, exploration' },
+            { icon: '⚖️', title: 'Conflict Resolution', desc: 'Disagreements, competing priorities' },
+            { icon: '🎓', title: 'Mentorship', desc: 'Coaching, career growth, feedback' },
+            { icon: '🚨', title: 'Crisis Response', desc: 'Major incidents, customer escalations' }
+          ].map((item, i) => (
+            <div key={i} style={{
+              background: 'var(--bg-elevated)',
+              padding: '15px',
+              borderRadius: '8px',
+              textAlign: 'center'
+            }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>{item.icon}</div>
+              <div style={{ fontWeight: '600', marginBottom: '4px', fontSize: '0.9rem' }}>{item.title}</div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{item.desc}</div>
+            </div>
+          ))}
+        </div>
       </Card>
     </div>
   );

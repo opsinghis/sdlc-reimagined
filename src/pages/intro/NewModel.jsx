@@ -10,7 +10,8 @@ import {
   TableRow,
   TableHeader,
   TableCell,
-  Badge
+  Badge,
+  InfoBox
 } from '../../components/ui';
 
 const NewModel = () => {
@@ -22,6 +23,16 @@ const NewModel = () => {
     { icon: '🔍', title: 'AI Quality', subtitle: 'Review + validate', aiDriven: true },
     { icon: '✅', title: 'Human Gate', subtitle: 'Final approval', aiDriven: false },
     { icon: '🚀', title: 'AI Deploy', subtitle: 'Auto release', aiDriven: true }
+  ];
+
+  const agentOrchestration = [
+    { step: 'Intent Captured', agent: 'Orchestrator Agent', action: 'Receives goal, routes to Product Agent', color: 'var(--accent-purple)' },
+    { step: 'Requirements Generated', agent: 'Product Agent', action: 'Creates stories, specs, acceptance criteria', color: 'var(--accent-blue)' },
+    { step: 'Design Completed', agent: 'Architect Agent', action: 'Generates technical design, API specs', color: 'var(--accent-cyan)' },
+    { step: 'Code Developed', agent: 'Dev Agents (FE/BE/DB)', action: 'Implements code in parallel', color: 'var(--accent-green)' },
+    { step: 'Quality Validated', agent: 'QE Agent', action: 'Generates tests, runs E2E, validates', color: 'var(--accent-orange)' },
+    { step: 'Security Cleared', agent: 'Security Agent', action: 'SAST/DAST scans, compliance check', color: 'var(--accent-red)' },
+    { step: 'Deployed', agent: 'DevOps Agent', action: 'CI/CD, infra provisioning, monitoring', color: 'var(--accent-purple)' },
   ];
 
   const divisionOfLabor = [
@@ -48,6 +59,81 @@ const NewModel = () => {
           Instead of time-boxed sprints, work flows continuously from intent to production with AI orchestration.
         </p>
         <FlowDiagram steps={flowSteps} />
+      </Card>
+
+      {/* AI Agent Orchestration - How it works */}
+      <Card>
+        <CardTitle icon="🤖">AI Agents Driving the Flow</CardTitle>
+        <p style={{ marginBottom: '20px', color: 'var(--text-secondary)' }}>
+          Each step in the continuous flow is handled by specialized AI agents, coordinated by an Orchestrator Agent that manages handoffs and escalations.
+        </p>
+
+        <div style={{ position: 'relative' }}>
+          {agentOrchestration.map((item, i) => (
+            <div key={i} style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: '15px',
+              marginBottom: i < agentOrchestration.length - 1 ? '0' : '0',
+              position: 'relative'
+            }}>
+              {/* Vertical connector line */}
+              {i < agentOrchestration.length - 1 && (
+                <div style={{
+                  position: 'absolute',
+                  left: '15px',
+                  top: '32px',
+                  width: '2px',
+                  height: '40px',
+                  background: 'var(--border)'
+                }} />
+              )}
+
+              {/* Step indicator */}
+              <div style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '50%',
+                background: item.color,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '0.8rem',
+                fontWeight: '600',
+                flexShrink: 0
+              }}>
+                {i + 1}
+              </div>
+
+              {/* Content */}
+              <div style={{
+                flex: 1,
+                background: 'var(--bg-elevated)',
+                padding: '12px 15px',
+                borderRadius: '8px',
+                marginBottom: '12px',
+                borderLeft: `3px solid ${item.color}`
+              }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
+                  <span style={{ fontWeight: '600', fontSize: '0.9rem' }}>{item.step}</span>
+                  <span style={{
+                    padding: '2px 8px',
+                    background: `${item.color}22`,
+                    borderRadius: '4px',
+                    fontSize: '0.75rem',
+                    color: item.color,
+                    fontWeight: '500'
+                  }}>{item.agent}</span>
+                </div>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>{item.action}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <InfoBox variant="insight" title="Orchestrator Agent">
+          The Orchestrator Agent is the brain of the system - it receives intents, decomposes work, routes to specialist agents, monitors progress, handles escalations, and ensures quality gates are met before handoffs.
+        </InfoBox>
       </Card>
 
       <Card>
@@ -200,6 +286,40 @@ const NewModel = () => {
             </TableRow>
           </TableBody>
         </Table>
+      </Card>
+
+      {/* Link to deeper content */}
+      <Card>
+        <CardTitle icon="🔗">Dive Deeper</CardTitle>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
+          This new model is powered by a comprehensive AI agent architecture with clearly defined human checkpoints.
+        </p>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: '15px'
+        }}>
+          {[
+            { icon: '🤖', title: 'AI Agent Architecture', desc: 'Specialist agents for every phase', path: '/ai-native/agent-architecture' },
+            { icon: '🔄', title: 'Role Evolution', desc: 'How human roles transform', path: '/ai-native/role-evolution' },
+            { icon: '🏗️', title: 'Org Structure', desc: 'New organizational model', path: '/ai-native/org-structure' },
+            { icon: '🚨', title: 'Human Checkpoints', desc: 'When humans must intervene', path: '/ai-native/human-checkpoints' }
+          ].map((item, i) => (
+            <a key={i} href={item.path} style={{
+              display: 'block',
+              background: 'var(--bg-elevated)',
+              padding: '15px',
+              borderRadius: '8px',
+              textDecoration: 'none',
+              color: 'inherit',
+              transition: 'transform 0.2s, box-shadow 0.2s'
+            }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>{item.icon}</div>
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>{item.title}</div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{item.desc}</div>
+            </a>
+          ))}
+        </div>
       </Card>
     </div>
   );

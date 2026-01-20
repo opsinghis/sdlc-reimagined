@@ -2,6 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout';
 import { Overview, Transformation, NewModel } from './pages/intro';
+import {
+  AgentArchitecture,
+  RoleEvolution,
+  OrgStructure,
+  HumanCheckpoints,
+  TransitionRoadmap
+} from './pages/ai-native';
 import { Ceremonies, ContinuousFlow, WorkManagement } from './pages/process';
 import { ProductOwner, Developer, QEEngineer, DevOps, Architect, ScrumMaster } from './pages/roles';
 import { Frontend, Backend, Commerce, Data } from './pages/playbooks';
@@ -28,6 +35,13 @@ function App() {
           <Route index element={<Overview />} />
           <Route path="transformation" element={<Transformation />} />
           <Route path="new-model" element={<NewModel />} />
+
+          {/* AI-Native Organization */}
+          <Route path="ai-native/agent-architecture" element={<AgentArchitecture />} />
+          <Route path="ai-native/role-evolution" element={<RoleEvolution />} />
+          <Route path="ai-native/org-structure" element={<OrgStructure />} />
+          <Route path="ai-native/human-checkpoints" element={<HumanCheckpoints />} />
+          <Route path="ai-native/transition-roadmap" element={<TransitionRoadmap />} />
 
           {/* Process */}
           <Route path="ceremonies" element={<Ceremonies />} />

@@ -218,6 +218,40 @@ Output as fixtures we can use in tests."`
           </ul>
         </InfoBox>
       </Card>
+
+      {/* AI Agent Context */}
+      <Card>
+        <CardTitle icon="🤖">Your AI Agent Partners</CardTitle>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
+          In the AI-native model, you collaborate with specialized QE agents that handle different aspects of quality assurance:
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '15px' }}>
+          {[
+            { icon: '🧪', name: 'Unit Test Agent', desc: 'Generates unit tests for all code changes' },
+            { icon: '🔗', name: 'Integration Agent', desc: 'Creates API and service integration tests' },
+            { icon: '🎭', name: 'E2E Test Agent', desc: 'Builds user journey automation tests' },
+            { icon: '⚡', name: 'Performance Agent', desc: 'Load testing, benchmarks, profiling' },
+            { icon: '🔒', name: 'Security Agent', desc: 'SAST, DAST, penetration test coordination' },
+            { icon: '♿', name: 'Accessibility Agent', desc: 'WCAG compliance, screen reader testing' }
+          ].map((agent, i) => (
+            <div key={i} style={{
+              background: 'var(--bg-elevated)',
+              padding: '15px',
+              borderRadius: '8px',
+              textAlign: 'center'
+            }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>{agent.icon}</div>
+              <div style={{ fontWeight: '600', marginBottom: '4px', fontSize: '0.9rem' }}>{agent.name}</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{agent.desc}</div>
+            </div>
+          ))}
+        </div>
+        <InfoBox variant="insight" title="The QE Specialist Role">
+          Human QE specialists evolve from test writers to quality architects - designing test strategies, reviewing AI-generated tests,
+          leading exploratory testing sessions, and ensuring the AI agents maintain high quality standards.
+          See <a href="/ai-native/role-evolution" style={{ color: 'var(--accent-purple)' }}>Role Evolution</a> for the full picture.
+        </InfoBox>
+      </Card>
     </div>
   );
 };

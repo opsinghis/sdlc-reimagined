@@ -201,6 +201,40 @@ alias cpr='claude "Generate a PR description from my changes:"'`}
           </ul>
         </InfoBox>
       </Card>
+
+      {/* AI Agent Collaboration */}
+      <Card>
+        <CardTitle icon="🤖">Your AI Agent Team</CardTitle>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
+          In the AI-native model, developers work alongside specialized Dev Agents that handle different layers of the stack:
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '15px' }}>
+          {[
+            { icon: '🎨', name: 'Frontend Agent', desc: 'React/Vue components, styling, responsive design' },
+            { icon: '⚙️', name: 'Backend Agent', desc: 'APIs, business logic, service orchestration' },
+            { icon: '🗄️', name: 'Database Agent', desc: 'Schema design, migrations, query optimization' },
+            { icon: '🧪', name: 'Test Agent', desc: 'Unit, integration, E2E test generation' },
+            { icon: '📝', name: 'Doc Agent', desc: 'API docs, READMEs, architecture diagrams' },
+            { icon: '🔍', name: 'Review Agent', desc: 'First-pass code review, style checks' }
+          ].map((agent, i) => (
+            <div key={i} style={{
+              background: 'var(--bg-elevated)',
+              padding: '15px',
+              borderRadius: '8px',
+              textAlign: 'center'
+            }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>{agent.icon}</div>
+              <div style={{ fontWeight: '600', marginBottom: '4px', fontSize: '0.9rem' }}>{agent.name}</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{agent.desc}</div>
+            </div>
+          ))}
+        </div>
+        <InfoBox variant="insight" title="The Developer Specialist Role">
+          Human developers evolve from coders to AI orchestrators - directing agents, reviewing output, making architectural decisions,
+          and focusing on complex problems that require creativity and deep understanding.
+          See <a href="/ai-native/role-evolution" style={{ color: 'var(--accent-purple)' }}>Role Evolution</a> for the complete picture.
+        </InfoBox>
+      </Card>
     </div>
   );
 };

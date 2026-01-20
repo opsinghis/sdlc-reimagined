@@ -252,6 +252,43 @@ const ScrumMaster = () => {
           </ul>
         </InfoBox>
       </Card>
+
+      {/* Role Evolution in AI-Native World */}
+      <Card>
+        <CardTitle icon="🔮">The Future: Flow Manager</CardTitle>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
+          In a fully AI-native organization, the Scrum Master role evolves into a <strong>Flow Manager</strong> -
+          overseeing AI orchestration, optimizing continuous flow, and focusing on human development.
+        </p>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '15px'
+        }}>
+          {[
+            { icon: '🤖', title: 'AI Orchestrator Partner', desc: 'Configure and tune the Orchestrator Agent for optimal flow' },
+            { icon: '📊', title: 'Flow Analytics', desc: 'Monitor throughput, cycle time, and value delivery metrics' },
+            { icon: '🚦', title: 'Human Checkpoint Manager', desc: 'Define and manage escalation triggers and human gates' },
+            { icon: '🎓', title: 'AI Adoption Coach', desc: 'Train teams on effective AI collaboration patterns' }
+          ].map((item, i) => (
+            <div key={i} style={{
+              background: 'var(--bg-elevated)',
+              padding: '15px',
+              borderRadius: '8px',
+              borderLeft: '3px solid var(--accent-purple)'
+            }}>
+              <div style={{ fontSize: '1.3rem', marginBottom: '8px' }}>{item.icon}</div>
+              <div style={{ fontWeight: '600', marginBottom: '4px', fontSize: '0.9rem' }}>{item.title}</div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{item.desc}</div>
+            </div>
+          ))}
+        </div>
+        <InfoBox variant="insight" title="Transformation Path">
+          The transition from Scrum Master to Flow Manager happens gradually as AI agents take over more operational tasks.
+          See the <a href="/ai-native/role-evolution" style={{ color: 'var(--accent-purple)' }}>Role Evolution</a> and
+          <a href="/ai-native/transition-roadmap" style={{ color: 'var(--accent-purple)', marginLeft: '5px' }}>Transition Roadmap</a> for details.
+        </InfoBox>
+      </Card>
     </div>
   );
 };

@@ -246,7 +246,7 @@ const Overview = () => {
         <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '20px' }}>
           We're not just adding AI tools to existing processes. We're asking:{' '}
           <strong style={{ color: 'var(--accent-purple)' }}>
-            If we were designing the SDLC from scratch today, with AI as a team member, what would it look like?
+            If we were designing the SDLC from scratch today, with AI agents handling every phase, what would it look like?
           </strong>
         </p>
 
@@ -254,23 +254,66 @@ const Overview = () => {
           <h3>❓ Questions We're Answering</h3>
           <div className="decision-grid">
             <div className="decision-item">
-              <h4>Do we need 2-week sprints?</h4>
-              <p>Or can we move to continuous flow with AI handling the coordination?</p>
+              <h4>Do we need human QE engineers?</h4>
+              <p>Or can AI agents generate, execute, and maintain all tests autonomously?</p>
             </div>
             <div className="decision-item">
-              <h4>Do we need Jira tickets?</h4>
-              <p>Or can intent-based work management replace ticket pushing?</p>
+              <h4>Do we need Scrum Masters?</h4>
+              <p>Or can an Orchestrator Agent manage flow, remove blockers, and surface issues?</p>
             </div>
             <div className="decision-item">
               <h4>Do we need daily standups?</h4>
-              <p>Or can AI-generated status make synchronous meetings optional?</p>
+              <p>Or can AI-generated async digests replace synchronous ceremonies entirely?</p>
             </div>
             <div className="decision-item">
-              <h4>Do we need code reviews?</h4>
-              <p>Or can AI review with human approval gates for strategic decisions?</p>
+              <h4>When do humans intervene?</h4>
+              <p>Only for strategy, ethics, relationships, and edge cases - not routine work.</p>
             </div>
           </div>
         </div>
+      </Card>
+
+      {/* AI Agent Vision */}
+      <Card>
+        <CardTitle icon="🤖">The AI Agent Model</CardTitle>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
+          Every phase of the SDLC is handled by specialized AI agents, orchestrated by a master agent,
+          with humans intervening only for judgment calls.
+        </p>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+          gap: '15px',
+          marginBottom: '20px'
+        }}>
+          {[
+            { icon: '🎯', name: 'Product Agent', tasks: 'Stories, specs, priorities' },
+            { icon: '💻', name: 'Dev Agents', tasks: 'Frontend, backend, database' },
+            { icon: '🧪', name: 'QE Agents', tasks: 'Unit, E2E, performance tests' },
+            { icon: '🔒', name: 'Security Agent', tasks: 'SAST, DAST, compliance' },
+            { icon: '🚀', name: 'DevOps Agents', tasks: 'CI/CD, infra, monitoring' },
+            { icon: '🚒', name: 'Incident Agent', tasks: 'Detection, auto-remediation' }
+          ].map((agent, i) => (
+            <div key={i} style={{
+              background: 'var(--bg-elevated)',
+              padding: '15px',
+              borderRadius: '10px',
+              textAlign: 'center'
+            }}>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>{agent.icon}</div>
+              <div style={{ fontWeight: '600', fontSize: '0.9rem', marginBottom: '4px' }}>{agent.name}</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{agent.tasks}</div>
+            </div>
+          ))}
+        </div>
+
+        <InfoBox variant="insight" title="Explore the Full Vision">
+          <p style={{ margin: 0 }}>
+            See the complete <strong>AI Agent Architecture</strong>, <strong>Role Evolution</strong>, and
+            <strong> Human Checkpoints</strong> in the AI-Native Organization section.
+          </p>
+        </InfoBox>
       </Card>
 
       {/* Transformation at a Glance */}
