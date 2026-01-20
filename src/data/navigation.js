@@ -23,7 +23,8 @@ import {
   GitBranch,
   Network,
   AlertCircle,
-  Map
+  Map,
+  GitCompare
 } from 'lucide-react';
 
 export const navigation = [
@@ -31,6 +32,7 @@ export const navigation = [
   { id: 'overview', icon: Home, label: 'Overview', section: 'Introduction', path: '/' },
   { id: 'transformation', icon: Zap, label: 'AI Transformation', section: 'Introduction', path: '/transformation' },
   { id: 'new-model', icon: RefreshCw, label: 'The New SDLC Model', section: 'Introduction', path: '/new-model' },
+  { id: 'sdlc-comparison', icon: GitCompare, label: 'Traditional vs AI-Native', section: 'Introduction', path: '/sdlc-comparison' },
 
   // AI-Native Organization (NEW SECTION)
   { id: 'agent-architecture', icon: Bot, label: 'AI Agent Architecture', section: 'AI-Native Organization', path: '/ai-native/agent-architecture' },

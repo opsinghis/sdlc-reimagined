@@ -182,7 +182,7 @@ const Transformation = () => {
                 fontSize: '0.85rem',
                 fontWeight: '600'
               }}>AI-NATIVE SDLC</span>
-              <span style={{ color: 'var(--text-muted)' }}>3 phases • 4 weeks • AI + 3 human roles • Flow-based</span>
+              <span style={{ color: 'var(--text-muted)' }}>10 steps • 4-6 weeks • 3 human gates • AI executes</span>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
@@ -333,46 +333,43 @@ const Transformation = () => {
             </div>
           </div>
 
-          {/* The AI Agent Foundation */}
+          {/* The Key Insight */}
           <Card style={{ marginTop: '30px' }}>
-            <h3 style={{ marginBottom: '20px' }}>🤖 Powered by Specialized AI Agents</h3>
+            <h3 style={{ marginBottom: '20px' }}>💡 The Key Insight</h3>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
-              This transformation isn't about adding AI to existing processes - it's about replacing entire workflows
-              with specialized AI agents that execute autonomously, escalating to humans only for strategic decisions.
+              This transformation isn't about adding AI to existing processes - it's about fundamentally changing
+              <strong> who does what</strong>. AI executes, humans decide at 3 strategic gates.
             </p>
 
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '15px',
               marginBottom: '20px'
             }}>
               {[
-                { phase: 'Intent & Design', agents: ['Product Agent', 'Architect Agent', 'Design Agent'], color: '#8b5cf6' },
-                { phase: 'AI-Augmented Build', agents: ['Dev Agents', 'QE Agents', 'Security Agent'], color: '#22d3ee' },
-                { phase: 'Intelligent Ops', agents: ['DevOps Agent', 'Incident Agent', 'Analytics Agent'], color: '#4ade80' }
+                { gate: 'Gate 1: Define Intent', who: 'Human', what: 'Sets the goal', icon: '🎯', color: 'var(--accent-orange)' },
+                { gate: 'Gate 2: Review Specs', who: 'Human', what: 'Validates requirements', icon: '📋', color: 'var(--accent-orange)' },
+                { gate: 'Gate 3: Final Approval', who: 'Human', what: 'Approves for production', icon: '✅', color: 'var(--accent-orange)' }
               ].map((item, i) => (
                 <div key={i} style={{
                   background: `${item.color}15`,
-                  border: `1px solid ${item.color}`,
+                  border: `2px dashed ${item.color}`,
                   borderRadius: '12px',
-                  padding: '20px'
+                  padding: '20px',
+                  textAlign: 'center'
                 }}>
-                  <div style={{ fontWeight: '600', color: item.color, marginBottom: '10px' }}>{item.phase}</div>
-                  {item.agents.map((agent, j) => (
-                    <div key={j} style={{
-                      padding: '5px 10px',
-                      background: 'var(--bg-card)',
-                      borderRadius: '6px',
-                      marginBottom: '5px',
-                      fontSize: '0.85rem'
-                    }}>
-                      🤖 {agent}
-                    </div>
-                  ))}
+                  <div style={{ fontSize: '2rem', marginBottom: '8px' }}>{item.icon}</div>
+                  <div style={{ fontWeight: '600', color: item.color, marginBottom: '5px' }}>{item.gate}</div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{item.what}</div>
                 </div>
               ))}
             </div>
+
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '20px', textAlign: 'center' }}>
+              <strong>Everything between these gates</strong> - requirements generation, design, coding, testing, deployment -
+              is handled by <strong>AI agents</strong> working in parallel.
+            </p>
 
             <div style={{
               background: 'var(--bg-elevated)',
@@ -381,8 +378,8 @@ const Transformation = () => {
               textAlign: 'center'
             }}>
               <p style={{ margin: 0, color: 'var(--text-secondary)' }}>
-                Explore the complete agent architecture, role evolution, and human checkpoints in the{' '}
-                <strong style={{ color: 'var(--accent-purple)' }}>AI-Native Organization</strong> section.
+                See the <a href="/sdlc-comparison" style={{ color: 'var(--accent-blue)', fontWeight: '600' }}>detailed step-by-step flow</a> showing exactly how work moves through the 10 stages, or
+                explore the complete <a href="/ai-native/agent-architecture" style={{ color: 'var(--accent-purple)', fontWeight: '600' }}>AI Agent Architecture</a>.
               </p>
             </div>
           </Card>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout';
-import { Overview, Transformation, NewModel } from './pages/intro';
+import { Overview, Transformation, NewModel, SDLCComparison } from './pages/intro';
 import {
   AgentArchitecture,
   RoleEvolution,
@@ -35,6 +35,7 @@ function App() {
           <Route index element={<Overview />} />
           <Route path="transformation" element={<Transformation />} />
           <Route path="new-model" element={<NewModel />} />
+          <Route path="sdlc-comparison" element={<SDLCComparison />} />
 
           {/* AI-Native Organization */}
           <Route path="ai-native/agent-architecture" element={<AgentArchitecture />} />

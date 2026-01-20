@@ -15,24 +15,15 @@ import {
 } from '../../components/ui';
 
 const NewModel = () => {
+  // Simplified flow showing the core pattern: Human → AI → Human → AI → Human → AI
   const flowSteps = [
-    { icon: '💡', title: 'Intent', subtitle: 'Goal or problem', aiDriven: false },
-    { icon: '🤖', title: 'AI Expansion', subtitle: 'Requirements, design', aiDriven: true },
-    { icon: '👤', title: 'Human Review', subtitle: 'Strategic approval', aiDriven: false },
-    { icon: '⚡', title: 'AI Build', subtitle: 'Code + tests', aiDriven: true },
-    { icon: '🔍', title: 'AI Quality', subtitle: 'Review + validate', aiDriven: true },
-    { icon: '✅', title: 'Human Gate', subtitle: 'Final approval', aiDriven: false },
-    { icon: '🚀', title: 'AI Deploy', subtitle: 'Auto release', aiDriven: true }
-  ];
-
-  const agentOrchestration = [
-    { step: 'Intent Captured', agent: 'Orchestrator Agent', action: 'Receives goal, routes to Product Agent', color: 'var(--accent-purple)' },
-    { step: 'Requirements Generated', agent: 'Product Agent', action: 'Creates stories, specs, acceptance criteria', color: 'var(--accent-blue)' },
-    { step: 'Design Completed', agent: 'Architect Agent', action: 'Generates technical design, API specs', color: 'var(--accent-cyan)' },
-    { step: 'Code Developed', agent: 'Dev Agents (FE/BE/DB)', action: 'Implements code in parallel', color: 'var(--accent-green)' },
-    { step: 'Quality Validated', agent: 'QE Agent', action: 'Generates tests, runs E2E, validates', color: 'var(--accent-orange)' },
-    { step: 'Security Cleared', agent: 'Security Agent', action: 'SAST/DAST scans, compliance check', color: 'var(--accent-red)' },
-    { step: 'Deployed', agent: 'DevOps Agent', action: 'CI/CD, infra provisioning, monitoring', color: 'var(--accent-purple)' },
+    { icon: '👤', title: 'Define Intent', subtitle: 'Human sets goal', aiDriven: false },
+    { icon: '🧠', title: 'AI Orchestrates', subtitle: 'Plans & routes', aiDriven: true },
+    { icon: '📋', title: 'AI Generates', subtitle: 'Specs & design', aiDriven: true },
+    { icon: '👤', title: 'Human Reviews', subtitle: 'Validates specs', aiDriven: false },
+    { icon: '💻', title: 'AI Builds', subtitle: 'Code + tests', aiDriven: true },
+    { icon: '👤', title: 'Human Approves', subtitle: 'Final gate', aiDriven: false },
+    { icon: '🚀', title: 'AI Deploys', subtitle: 'Ships to prod', aiDriven: true }
   ];
 
   const divisionOfLabor = [
@@ -56,83 +47,77 @@ const NewModel = () => {
       <Card>
         <CardTitle icon="🌊">Continuous Value Flow</CardTitle>
         <p style={{ marginBottom: '20px', color: 'var(--text-secondary)' }}>
-          Instead of time-boxed sprints, work flows continuously from intent to production with AI orchestration.
+          Instead of time-boxed sprints, work flows continuously from intent to production.
+          The pattern is simple: <strong>Human decides → AI executes → Human validates → repeat</strong>.
         </p>
         <FlowDiagram steps={flowSteps} />
+
+        <div style={{
+          marginTop: '20px',
+          padding: '15px',
+          background: 'var(--bg-elevated)',
+          borderRadius: '10px',
+          textAlign: 'center'
+        }}>
+          <p style={{ margin: 0, color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+            See the detailed <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontWeight: '600' }}>step-by-step flow with all 10 stages</a> in the Traditional vs AI-Native comparison.
+          </p>
+        </div>
       </Card>
 
-      {/* AI Agent Orchestration - How it works */}
+      {/* Core Principle */}
       <Card>
-        <CardTitle icon="🤖">AI Agents Driving the Flow</CardTitle>
-        <p style={{ marginBottom: '20px', color: 'var(--text-secondary)' }}>
-          Each step in the continuous flow is handled by specialized AI agents, coordinated by an Orchestrator Agent that manages handoffs and escalations.
-        </p>
-
-        <div style={{ position: 'relative' }}>
-          {agentOrchestration.map((item, i) => (
-            <div key={i} style={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: '15px',
-              marginBottom: i < agentOrchestration.length - 1 ? '0' : '0',
-              position: 'relative'
-            }}>
-              {/* Vertical connector line */}
-              {i < agentOrchestration.length - 1 && (
-                <div style={{
-                  position: 'absolute',
-                  left: '15px',
-                  top: '32px',
-                  width: '2px',
-                  height: '40px',
-                  background: 'var(--border)'
-                }} />
-              )}
-
-              {/* Step indicator */}
-              <div style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '50%',
-                background: item.color,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '0.8rem',
-                fontWeight: '600',
-                flexShrink: 0
-              }}>
-                {i + 1}
-              </div>
-
-              {/* Content */}
-              <div style={{
-                flex: 1,
-                background: 'var(--bg-elevated)',
-                padding: '12px 15px',
-                borderRadius: '8px',
-                marginBottom: '12px',
-                borderLeft: `3px solid ${item.color}`
-              }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
-                  <span style={{ fontWeight: '600', fontSize: '0.9rem' }}>{item.step}</span>
-                  <span style={{
-                    padding: '2px 8px',
-                    background: `${item.color}22`,
-                    borderRadius: '4px',
-                    fontSize: '0.75rem',
-                    color: item.color,
-                    fontWeight: '500'
-                  }}>{item.agent}</span>
-                </div>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>{item.action}</p>
-              </div>
-            </div>
-          ))}
+        <CardTitle icon="💡">The Core Principle</CardTitle>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '20px',
+          marginBottom: '20px'
+        }}>
+          <div style={{
+            background: 'linear-gradient(135deg, var(--accent-orange)15, var(--accent-orange)05)',
+            border: '2px solid var(--accent-orange)',
+            borderRadius: '12px',
+            padding: '25px',
+            textAlign: 'center'
+          }}>
+            <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>👤</div>
+            <div style={{ fontWeight: '700', fontSize: '1.1rem', marginBottom: '8px', color: 'var(--accent-orange)' }}>Humans DECIDE</div>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+              What to build, whether specs are right, when to ship
+            </p>
+          </div>
+          <div style={{
+            background: 'linear-gradient(135deg, var(--accent-blue)15, var(--accent-blue)05)',
+            border: '2px solid var(--accent-blue)',
+            borderRadius: '12px',
+            padding: '25px',
+            textAlign: 'center'
+          }}>
+            <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>🤖</div>
+            <div style={{ fontWeight: '700', fontSize: '1.1rem', marginBottom: '8px', color: 'var(--accent-blue)' }}>AI EXECUTES</div>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+              Requirements, design, code, tests, deployment
+            </p>
+          </div>
+          <div style={{
+            background: 'linear-gradient(135deg, var(--accent-purple)15, var(--accent-purple)05)',
+            border: '2px solid var(--accent-purple)',
+            borderRadius: '12px',
+            padding: '25px',
+            textAlign: 'center'
+          }}>
+            <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>🧠</div>
+            <div style={{ fontWeight: '700', fontSize: '1.1rem', marginBottom: '8px', color: 'var(--accent-purple)' }}>Orchestrator COORDINATES</div>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+              Routes work, manages flow, handles escalations
+            </p>
+          </div>
         </div>
 
-        <InfoBox variant="insight" title="Orchestrator Agent">
-          The Orchestrator Agent is the brain of the system - it receives intents, decomposes work, routes to specialist agents, monitors progress, handles escalations, and ensures quality gates are met before handoffs.
+        <InfoBox variant="insight" title="The Fundamental Shift">
+          Traditional SDLC: Humans do all the work, tools assist.<br/>
+          AI-Native SDLC: AI does all the work, humans make decisions at 3 key gates.
         </InfoBox>
       </Card>
 
@@ -290,9 +275,9 @@ const NewModel = () => {
 
       {/* Link to deeper content */}
       <Card>
-        <CardTitle icon="🔗">Dive Deeper</CardTitle>
+        <CardTitle icon="🔗">Explore Further</CardTitle>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
-          This new model is powered by a comprehensive AI agent architecture with clearly defined human checkpoints.
+          Understand the complete AI-native model with detailed comparisons and agent architecture.
         </p>
         <div style={{
           display: 'grid',
@@ -300,10 +285,10 @@ const NewModel = () => {
           gap: '15px'
         }}>
           {[
+            { icon: '⚖️', title: 'Traditional vs AI-Native', desc: 'Side-by-side visual comparison', path: '/sdlc-comparison' },
             { icon: '🤖', title: 'AI Agent Architecture', desc: 'Specialist agents for every phase', path: '/ai-native/agent-architecture' },
-            { icon: '🔄', title: 'Role Evolution', desc: 'How human roles transform', path: '/ai-native/role-evolution' },
-            { icon: '🏗️', title: 'Org Structure', desc: 'New organizational model', path: '/ai-native/org-structure' },
-            { icon: '🚨', title: 'Human Checkpoints', desc: 'When humans must intervene', path: '/ai-native/human-checkpoints' }
+            { icon: '🚨', title: 'Human Checkpoints', desc: 'The 3 key decision gates', path: '/ai-native/human-checkpoints' },
+            { icon: '🔄', title: 'Role Evolution', desc: 'How human roles transform', path: '/ai-native/role-evolution' }
           ].map((item, i) => (
             <a key={i} href={item.path} style={{
               display: 'block',
