@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -78,9 +79,9 @@ const DeveloperSetup = () => {
           <div>
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>Your Role: AI-Augmented Developer</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, Dev Agents (Frontend, Backend, Database) handle code generation in <strong>Steps 5-6</strong>.
+              In the <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</Link>, Dev Agents (Frontend, Backend, Database) handle code generation in <strong>Steps 5-6</strong>.
               You review AI-generated code at <strong>Gate 3</strong>, make architectural decisions, and focus on complex problems.
-              See <a href="/roles/developer" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>Developer Role</a> for the full picture.
+              See <Link to="/roles/developer" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>Developer Role</Link> for the full picture.
             </p>
           </div>
         </div>

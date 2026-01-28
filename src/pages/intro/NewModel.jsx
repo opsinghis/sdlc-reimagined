@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -60,7 +61,7 @@ const NewModel = () => {
           textAlign: 'center'
         }}>
           <p style={{ margin: 0, color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-            See the detailed <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontWeight: '600' }}>step-by-step flow with all 10 stages</a> in the Traditional vs AI-Native comparison.
+            See the detailed <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontWeight: '600' }}>step-by-step flow with all 10 stages</Link> in the Traditional vs AI-Native comparison.
           </p>
         </div>
       </Card>

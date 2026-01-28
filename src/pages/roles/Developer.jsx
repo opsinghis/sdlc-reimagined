@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -136,7 +137,7 @@ Provide specific line-by-line feedback."`
             </div>
           </div>
           <div style={{ marginTop: '15px', textAlign: 'center' }}>
-            <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</a>
+            <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</Link>
           </div>
         </div>
       </Card>
@@ -283,7 +284,7 @@ alias cpr='ai "Generate a PR description from my changes:"'`}
         <InfoBox variant="insight" title="The Developer Specialist Role">
           Human developers evolve from coders to AI orchestrators - directing agents, reviewing output, making architectural decisions,
           and focusing on complex problems that require creativity and deep understanding.
-          See <a href="/ai-native/role-evolution" style={{ color: 'var(--accent-purple)' }}>Role Evolution</a> for the complete picture.
+          See <Link to="/ai-native/role-evolution" style={{ color: 'var(--accent-purple)' }}>Role Evolution</Link> for the complete picture.
         </InfoBox>
       </Card>
     </div>

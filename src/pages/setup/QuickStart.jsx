@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -30,7 +31,7 @@ const QuickStart = () => {
           <div>
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>Setting Up for the Agentic SDLC</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              This quick start gets you ready to work with AI agents in the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>.
+              This quick start gets you ready to work with AI agents in the <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</Link>.
               Your AI Coding Assistant is the interface for collaborating with Product, Dev, QE, and DevOps agents at each of the <strong>3 human gates</strong>.
             </p>
           </div>

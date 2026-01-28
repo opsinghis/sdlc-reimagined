@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -29,9 +30,9 @@ const ArchitectSetup = () => {
           <div>
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>Your Role: Architecture Director</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, Architect Agent generates system designs and ADRs in <strong>Step 4</strong>.
+              In the <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</Link>, Architect Agent generates system designs and ADRs in <strong>Step 4</strong>.
               You review and approve architecture at <strong>Gate 2</strong>, guiding strategy and making key technical decisions.
-              See <a href="/roles/architect" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>Architect Role</a> for the full picture.
+              See <Link to="/roles/architect" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>Architect Role</Link> for the full picture.
             </p>
           </div>
         </div>

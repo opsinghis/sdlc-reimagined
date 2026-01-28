@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -296,9 +297,9 @@ const TransitionRoadmap = () => {
           borderRadius: '10px',
           textAlign: 'center'
         }}>
-          <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontWeight: '600' }}>
+          <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontWeight: '600' }}>
             See the detailed step-by-step flow →
-          </a>
+          </Link>
         </div>
       </Card>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -98,7 +99,7 @@ const ProductOwner = () => {
             </div>
           </div>
           <div style={{ marginTop: '15px', textAlign: 'center' }}>
-            <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</a>
+            <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</Link>
           </div>
         </div>
       </Card>

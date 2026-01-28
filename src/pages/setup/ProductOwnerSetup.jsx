@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -69,9 +70,9 @@ const ProductOwnerSetup = () => {
           <div>
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>Your Role: Intent Definer (Gate 1 & 2 Owner)</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, you define intent at <strong>Gate 1</strong> (Step 1) and review AI-generated specs at <strong>Gate 2</strong> (Step 3).
+              In the <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</Link>, you define intent at <strong>Gate 1</strong> (Step 1) and review AI-generated specs at <strong>Gate 2</strong> (Step 3).
               The Product Agent then translates your intent into detailed requirements.
-              See <a href="/roles/product-owner" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>Product Owner Role</a> for the full picture.
+              See <Link to="/roles/product-owner" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>Product Owner Role</Link> for the full picture.
             </p>
           </div>
         </div>

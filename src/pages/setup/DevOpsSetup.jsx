@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -29,9 +30,9 @@ const DevOpsSetup = () => {
           <div>
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>Your Role: Platform Strategist</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, DevOps Agent handles deployment (<strong>Step 9</strong>) and Monitoring Agent tracks health (<strong>Step 10</strong>).
+              In the <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</Link>, DevOps Agent handles deployment (<strong>Step 9</strong>) and Monitoring Agent tracks health (<strong>Step 10</strong>).
               You approve production releases at <strong>Gate 3</strong> and design the platform architecture.
-              See <a href="/roles/devops" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>DevOps Role</a> for the full picture.
+              See <Link to="/roles/devops" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>DevOps Role</Link> for the full picture.
             </p>
           </div>
         </div>

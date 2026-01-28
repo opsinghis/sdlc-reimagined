@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -139,7 +140,7 @@ const ScrumMaster = () => {
             </div>
           </div>
           <div style={{ marginTop: '15px', textAlign: 'center' }}>
-            <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</a>
+            <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</Link>
           </div>
         </div>
       </Card>
@@ -336,8 +337,8 @@ const ScrumMaster = () => {
         </div>
         <InfoBox variant="insight" title="Transformation Path">
           The transition from Scrum Master to Flow Manager happens gradually as AI agents take over more operational tasks.
-          See the <a href="/ai-native/role-evolution" style={{ color: 'var(--accent-purple)' }}>Role Evolution</a> and
-          <a href="/ai-native/transition-roadmap" style={{ color: 'var(--accent-purple)', marginLeft: '5px' }}>Transition Roadmap</a> for details.
+          See the <Link to="/ai-native/role-evolution" style={{ color: 'var(--accent-purple)' }}>Role Evolution</Link> and
+          <Link to="/ai-native/transition-roadmap" style={{ color: 'var(--accent-purple)', marginLeft: '5px' }}>Transition Roadmap</Link> for details.
         </InfoBox>
       </Card>
     </div>

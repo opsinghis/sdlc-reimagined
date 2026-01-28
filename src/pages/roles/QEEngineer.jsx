@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -140,7 +141,7 @@ Output as fixtures we can use in tests."`
             </div>
           </div>
           <div style={{ marginTop: '15px', textAlign: 'center' }}>
-            <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</a>
+            <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)', fontSize: '0.85rem' }}>See the full 10-step agentic flow →</Link>
           </div>
         </div>
       </Card>
@@ -300,7 +301,7 @@ Output as fixtures we can use in tests."`
         <InfoBox variant="insight" title="The QE Specialist Role">
           Human QE specialists evolve from test writers to quality architects - designing test strategies, reviewing AI-generated tests,
           leading exploratory testing sessions, and ensuring the AI agents maintain high quality standards.
-          See <a href="/ai-native/role-evolution" style={{ color: 'var(--accent-purple)' }}>Role Evolution</a> for the full picture.
+          See <Link to="/ai-native/role-evolution" style={{ color: 'var(--accent-purple)' }}>Role Evolution</Link> for the full picture.
         </InfoBox>
       </Card>
     </div>

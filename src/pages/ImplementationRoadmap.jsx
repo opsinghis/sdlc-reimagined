@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -455,8 +456,8 @@ const ImplementationRoadmap = () => {
           <div>
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>Implementing the 10-Step Agentic Flow</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              This roadmap guides you through implementing the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a> with <strong>3 human gates</strong>.
-              For the big-picture 4-wave strategy, see the <a href="/ai-native/transition-roadmap" style={{ color: 'var(--accent-purple)' }}>Transition Roadmap</a>.
+              This roadmap guides you through implementing the <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</Link> with <strong>3 human gates</strong>.
+              For the big-picture 4-wave strategy, see the <Link to="/ai-native/transition-roadmap" style={{ color: 'var(--accent-purple)' }}>Transition Roadmap</Link>.
             </p>
           </div>
         </div>
@@ -1111,7 +1112,7 @@ const ImplementationRoadmap = () => {
       <InfoBox variant="insight" title="Getting Started">
         <p style={{ margin: 0 }}>
           Start with the <strong>Quick Start Setup</strong> in the sidebar to install your AI Coding Assistant, then follow this roadmap phase by phase.
-          The <a href="/ai-native/transition-roadmap" style={{ color: 'var(--accent-purple)' }}>Transition Roadmap</a> provides the strategic 4-wave view,
+          The <Link to="/ai-native/transition-roadmap" style={{ color: 'var(--accent-purple)' }}>Transition Roadmap</Link> provides the strategic 4-wave view,
           while this page gives you the tactical week-by-week execution plan.
         </p>
       </InfoBox>

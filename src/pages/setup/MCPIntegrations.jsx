@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -47,7 +48,7 @@ const MCPIntegrations = () => {
           <div>
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>MCP Powers the Orchestrator Agent</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, MCP connects the Orchestrator Agent to your tools.
+              In the <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</Link>, MCP connects the Orchestrator Agent to your tools.
               This enables AI agents to read from Jira, manage GitHub PRs, update Slack, and access databases - automating the flow between <strong>human gates</strong>.
             </p>
           </div>

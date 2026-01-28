@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -89,7 +90,7 @@ const WorkManagement = () => {
           <div>
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>In the Agentic SDLC Model</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, the Orchestrator Agent becomes the work management system.
+              In the <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</Link>, the Orchestrator Agent becomes the work management system.
               It receives human intent at <strong>Gate 1</strong>, decomposes into tasks, assigns to specialist agents, tracks progress, and surfaces items for human review at <strong>Gate 2</strong> and <strong>Gate 3</strong>.
               Traditional ticket management is replaced by intent-based orchestration.
             </p>

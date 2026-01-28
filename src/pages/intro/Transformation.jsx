@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -378,8 +379,8 @@ const Transformation = () => {
               textAlign: 'center'
             }}>
               <p style={{ margin: 0, color: 'var(--text-secondary)' }}>
-                See the <a href="/sdlc-comparison" style={{ color: 'var(--accent-blue)', fontWeight: '600' }}>detailed step-by-step flow</a> showing exactly how work moves through the 10 stages, or
-                explore the complete <a href="/ai-native/agent-architecture" style={{ color: 'var(--accent-purple)', fontWeight: '600' }}>AI Agent Architecture</a>.
+                See the <Link to="/sdlc-comparison" style={{ color: 'var(--accent-blue)', fontWeight: '600' }}>detailed step-by-step flow</Link> showing exactly how work moves through the 10 stages, or
+                explore the complete <Link to="/ai-native/agent-architecture" style={{ color: 'var(--accent-purple)', fontWeight: '600' }}>AI Agent Architecture</Link>.
               </p>
             </div>
           </Card>

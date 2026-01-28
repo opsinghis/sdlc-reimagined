@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -41,7 +42,7 @@ const ContinuousFlow = () => {
           <div>
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>In the Agentic SDLC Model</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              The <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a> enables true continuous delivery.
+              The <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</Link> enables true continuous delivery.
               Work flows from <strong>Human Intent (Gate 1)</strong> → AI execution → <strong>Human Review (Gate 2)</strong> → AI build/test → <strong>Human Approval (Gate 3)</strong> → AI deploy.
               No sprints needed - the Orchestrator Agent manages flow continuously.
             </p>

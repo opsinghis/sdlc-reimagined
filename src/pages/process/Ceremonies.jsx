@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -284,7 +285,7 @@ Flag anything stale >2 days or blocked >1 day"`
           <div>
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>In the Agentic SDLC Model</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              The <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a> with only <strong>3 human gates</strong> eliminates most synchronous ceremonies.
+              The <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</Link> with only <strong>3 human gates</strong> eliminates most synchronous ceremonies.
               The Orchestrator Agent maintains real-time state, making status meetings obsolete.
               Humans sync only for strategic decisions at Gate 1 (Intent), Gate 2 (Spec Review), and Gate 3 (Final Approval).
             </p>

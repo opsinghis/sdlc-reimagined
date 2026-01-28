@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   PageHeader,
   Card,
@@ -29,9 +30,9 @@ const QEEngineerSetup = () => {
           <div>
             <div style={{ fontWeight: '600', marginBottom: '5px' }}>Your Role: Quality Strategist</div>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              In the <a href="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</a>, QE Agent generates tests in <strong>Step 7</strong> while Security Agent runs SAST/DAST.
+              In the <Link to="/sdlc-comparison" style={{ color: 'var(--accent-purple)' }}>10-step agentic flow</Link>, QE Agent generates tests in <strong>Step 7</strong> while Security Agent runs SAST/DAST.
               You review test coverage and security results at <strong>Gate 3</strong>, focusing on strategy and edge cases AI might miss.
-              See <a href="/roles/qe-engineer" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>QE Engineer Role</a> for the full picture.
+              See <Link to="/roles/qe-engineer" style={{ color: 'var(--accent-purple)', marginLeft: '3px' }}>QE Engineer Role</Link> for the full picture.
             </p>
           </div>
         </div>
